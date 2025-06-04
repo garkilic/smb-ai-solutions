@@ -31,35 +31,40 @@ export default function Home() {
               </div>
             </div>
             <h1 className="heading-xl text-light-brighter mb-6">
-              Your team's time is too valuable for repetitive work.
+              10x Your Business with AI
             </h1>
             <p className="text-xl text-light/80 mb-8">
-              Most companies give their employees tools like ChatGPT — but never teach them how to actually use them effectively. We help small teams make AI specific, repeatable, and practical.
+              While others are still figuring out ChatGPT, we help small businesses achieve 10x results by becoming AI-first operations. Get your free AI Readiness Assessment now.
             </p>
+            <div className="mb-8 p-4 bg-dark-card rounded-lg border border-neon/20">
+              <p className="text-neon font-medium">
+                "What was once impossible is now possible. What was once hard is now easy. And what was once easy is now obsolete."
+              </p>
+            </div>
             <FormModalWrapper />
             <p className="microcopy">Takes 2–3 minutes. No calls required.</p>
             
             <div className="mt-12 p-6 bg-dark-card rounded-xl border border-dark-border">
               <div className="flex items-center gap-3 mb-4">
                 <FaLightbulb className="w-6 h-6 text-neon" />
-                <h3 className="heading-md">What you get in the free AI assessment:</h3>
+                <h3 className="heading-md">Your Free AI Readiness Assessment:</h3>
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div className="flex items-center gap-2">
                   <FaCheckCircle className="w-5 h-5 text-neon" />
-                  <span className="text-light/70">Time-saving opportunities</span>
+                  <span className="text-light/70">10x productivity opportunities</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <FaCheckCircle className="w-5 h-5 text-neon" />
-                  <span className="text-light/70">Real examples</span>
+                  <span className="text-light/70">Role-specific AI mastery</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <FaCheckCircle className="w-5 h-5 text-neon" />
-                  <span className="text-light/70">Role-specific prompts</span>
+                  <span className="text-light/70">Implementation roadmap</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <FaCheckCircle className="w-5 h-5 text-neon" />
-                  <span className="text-light/70">Implementation plan</span>
+                  <span className="text-light/70">Future-proof strategy</span>
                 </div>
               </div>
             </div>
@@ -79,10 +84,10 @@ export default function Home() {
               <div className="card p-6">
                 <div className="flex items-center gap-3 mb-4">
                   <FaUsers className="w-6 h-6 text-neon" />
-                  <h3 className="heading-md">Enterprise Impact</h3>
+                  <h3 className="heading-md">10x Impact</h3>
                 </div>
                 <p className="text-light/70">
-                  We've implemented AI systems across large organizations, optimizing sales, support, and operations.
+                  We've helped businesses achieve 10x productivity gains by implementing AI-first workflows across their operations.
                 </p>
               </div>
               <div className="card p-6">
@@ -91,7 +96,7 @@ export default function Home() {
                   <h3 className="heading-md">500+ Hours Saved</h3>
                 </div>
                 <p className="text-light/70">
-                  Our automations have saved over 500 hours per month for enterprise clients.
+                  Our AI implementations have transformed impossible tasks into daily operations, saving over 500 hours monthly.
                 </p>
               </div>
             </div>
@@ -108,7 +113,7 @@ export default function Home() {
             </div>
             <h2 className="heading-lg mb-6">How It Works</h2>
             <p className="text-xl text-light/80 max-w-3xl mx-auto">
-              A simple, fast process that meets you where you are. Everything is async, tailored to your workflows.
+              A rapid transformation process that meets you where you are. We don't just add AI—we rebuild your workflows for the future.
             </p>
           </div>
 
@@ -158,6 +163,92 @@ export default function Home() {
         </div>
       </section>
 
+      {/* SOP Process Section */}
+      <section className="section-padding bg-dark">
+        <div className="container-custom">
+          <div className="text-center mb-16">
+            <div className="flex justify-center mb-6">
+              <FaTools className="w-12 h-12 text-neon" />
+            </div>
+            <h2 className="heading-lg mb-6">We Build AI-Powered SOPs That Scale Your Business</h2>
+            <p className="text-xl text-light/80 max-w-3xl mx-auto">
+              Semi-automated workflows that combine human insight with AI precision. Each SOP is designed to be teachable, repeatable, and partially automatable.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            <div className="card p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <FaBrain className="w-6 h-6 text-neon" />
+                <h3 className="heading-md">1. Define Purpose</h3>
+              </div>
+              <p className="text-light/70">Clear goals and outcomes for each workflow, from content creation to client onboarding.</p>
+            </div>
+            <div className="card p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <FaTools className="w-6 h-6 text-neon" />
+                <h3 className="heading-md">2. Tool Stack</h3>
+              </div>
+              <p className="text-light/70">Documented tools and inputs needed: Notion, Zapier, Airtable, ChatGPT, and more.</p>
+            </div>
+            <div className="card p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <FaChartLine className="w-6 h-6 text-neon" />
+                <h3 className="heading-md">3. Step-by-Step</h3>
+              </div>
+              <p className="text-light/70">Clear, sequential steps with purpose, inputs, tools, actions, and expected outputs.</p>
+            </div>
+            <div className="card p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <FaRobot className="w-6 h-6 text-neon" />
+                <h3 className="heading-md">4. AI Integration</h3>
+              </div>
+              <p className="text-light/70">Reusable prompt templates for ChatGPT, Claude, and API-connected assistants.</p>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="card p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <FaCheckCircle className="w-6 h-6 text-neon" />
+                <h3 className="heading-md">5. Quality Control</h3>
+              </div>
+              <p className="text-light/70">QA checklists to verify AI output and human input at each step.</p>
+            </div>
+            <div className="card p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <FaRocket className="w-6 h-6 text-neon" />
+                <h3 className="heading-md">6. Automation</h3>
+              </div>
+              <p className="text-light/70">Identified automation opportunities with Zapier, Make, and custom AI workflows.</p>
+            </div>
+            <div className="card p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <FaHandshake className="w-6 h-6 text-neon" />
+                <h3 className="heading-md">7. Deliverables</h3>
+              </div>
+              <p className="text-light/70">Clear output destinations and next steps for each workflow.</p>
+            </div>
+            <div className="card p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <FaLightbulb className="w-6 h-6 text-neon" />
+                <h3 className="heading-md">8. Best Practices</h3>
+              </div>
+              <p className="text-light/70">Documented edge cases, variations, and tips learned from experience.</p>
+            </div>
+          </div>
+
+          <div className="mt-12 p-6 bg-dark-card rounded-xl border border-neon/20">
+            <div className="flex items-center gap-4">
+              <FaRocket className="w-8 h-8 text-neon" />
+              <p className="text-lg text-light/90">
+                The result? Structured, teachable processes that reduce decision fatigue, speed up delivery, and create scalable systems that match your creative energy.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Pricing Section */}
       <section className="section-padding bg-dark">
         <div className="container-custom">
@@ -165,9 +256,9 @@ export default function Home() {
             <div className="flex justify-center mb-6">
               <FaChartLine className="w-12 h-12 text-neon" />
             </div>
-            <h2 className="heading-lg mb-6">What's It Cost to Save 5–10 Hours a Week?</h2>
+            <h2 className="heading-lg mb-6">What's It Cost to Future-Proof Your Business?</h2>
             <p className="text-xl text-light/80 max-w-3xl mx-auto">
-              Clear deliverables, no fluff. We make your existing AI tools actually useful.
+              Clear deliverables, no fluff. We help you become an AI-first business that stays ahead of the curve.
             </p>
           </div>
 
@@ -245,10 +336,10 @@ export default function Home() {
           </div>
 
           <div className="text-center mt-12">
-            <button className="btn-secondary group">
+            <a href="/pricing" className="btn-secondary group inline-flex items-center">
               View Our Plans
               <FaArrowRight className="inline-block ml-2 group-hover:translate-x-1 transition-transform" />
-            </button>
+            </a>
           </div>
         </div>
       </section>
@@ -305,9 +396,9 @@ export default function Home() {
           <div className="flex justify-center mb-6">
             <FaRocket className="w-12 h-12 text-neon" />
           </div>
-          <h2 className="heading-lg mb-6">Let's Make AI Actually Work for Your Team</h2>
+          <h2 className="heading-lg mb-6">Let's Transform Your Business with AI</h2>
           <p className="text-xl text-light/80 mb-8 max-w-2xl mx-auto">
-            No sales pitch, no bloated strategy docs. Just a real plan for real results.
+            No sales pitch, no bloated strategy docs. Just a real plan to make your business AI-first and future-proof.
           </p>
           <FormModalWrapper />
           <p className="microcopy">Takes 2–3 minutes. No calls required.</p>

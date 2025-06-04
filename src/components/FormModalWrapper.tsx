@@ -3,7 +3,11 @@
 import { useState } from 'react';
 import TallyFormModal from './TallyFormModal';
 
-export default function FormModalWrapper() {
+interface FormModalWrapperProps {
+  buttonText?: string;
+}
+
+export default function FormModalWrapper({ buttonText = "Start Your AI Transformation" }: FormModalWrapperProps) {
   const [isFormOpen, setIsFormOpen] = useState(false);
 
   return (
@@ -13,7 +17,7 @@ export default function FormModalWrapper() {
         onClick={() => setIsFormOpen(true)}
         className="btn-primary group"
       >
-        See How Much Time You Could Save
+        {buttonText}
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="inline-block ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform"
