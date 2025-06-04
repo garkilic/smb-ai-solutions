@@ -31,10 +31,11 @@ export default function Home() {
               </div>
             </div>
             <h1 className="heading-xl text-light-brighter mb-6">
-              10x Your Business with AI
+              Your Business Needs AI.<br />
+              We Make It Simple.
             </h1>
             <p className="text-xl text-light/80 mb-8">
-              While others are still figuring out ChatGPT, we help small businesses achieve 10x results by becoming AI-first operations. Get your free AI Readiness Assessment now.
+              AI isn't just for tech giants anymore. We help small businesses implement practical AI solutions that actually work. Get your free AI Readiness Assessment and discover how to stay ahead.
             </p>
             <div className="mb-8 p-4 bg-dark-card rounded-lg border border-neon/20">
               <p className="text-neon font-medium">
