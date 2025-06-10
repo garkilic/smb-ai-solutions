@@ -55,14 +55,14 @@ export default function TallyFormModal({ isOpen, onClose }: TallyFormModalProps)
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center">
-    <div 
+      <div 
         className="absolute inset-0 bg-white"
-      onClick={handleBackdropClick}
+        onClick={onClose}
       />
       <div className="relative w-full h-full">
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 z-10 p-2 rounded-full bg-white hover:bg-gray-100 transition-colors"
+          className="absolute top-4 right-4 z-50 p-2 rounded-full bg-white hover:bg-gray-100 transition-colors shadow-lg"
           aria-label="Close form"
         >
           <FaTimes className="w-6 h-6 text-black" />
@@ -70,7 +70,7 @@ export default function TallyFormModal({ isOpen, onClose }: TallyFormModalProps)
         <iframe
           src="https://tally.so/r/3jY44J?transparentBackground=1&showExitButton=1"
           className="w-full h-full border-0"
-          title="AI Readiness Assessment"
+          title="Contact Form"
         />
       </div>
     </div>

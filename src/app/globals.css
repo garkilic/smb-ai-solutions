@@ -2,12 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
-  --foreground-rgb: 230, 230, 230;
-  --background-start-rgb: 15, 15, 15;
-  --background-end-rgb: 26, 26, 26;
+  --foreground-rgb: 249, 250, 251;
+  --background-start-rgb: 31, 41, 55;
+  --background-end-rgb: 17, 24, 39;
 }
 
 body {
@@ -22,17 +22,17 @@ body {
 
 @layer components {
   .btn-primary {
-    @apply px-6 py-3 bg-neon text-dark rounded-lg font-medium 
+    @apply px-6 py-3 bg-primary text-light rounded-lg font-medium 
            transition-all duration-300 ease-in-out
-           hover:bg-neon/90 hover:shadow-neon hover:scale-[1.02]
-           focus:outline-none focus:ring-2 focus:ring-neon focus:ring-offset-2 focus:ring-offset-dark;
+           hover:bg-primary-dark hover:shadow-soft hover:scale-[1.02]
+           focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-neutral;
   }
 
   .btn-secondary {
-    @apply px-6 py-3 border border-neon text-neon rounded-lg font-medium
+    @apply px-6 py-3 border border-primary text-primary rounded-lg font-medium
            transition-all duration-300 ease-in-out
-           hover:bg-neon/10 hover:shadow-neon-sm
-           focus:outline-none focus:ring-2 focus:ring-neon focus:ring-offset-2 focus:ring-offset-dark;
+           hover:bg-primary/10 hover:shadow-soft
+           focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-neutral;
   }
   
   .section-padding {
@@ -44,9 +44,9 @@ body {
   }
 
   .card {
-    @apply bg-dark-card border border-dark-border rounded-xl
+    @apply bg-neutral-card border border-neutral-border rounded-xl
            transition-all duration-300 ease-in-out
-           hover:scale-[1.02] hover:border-neon/30 hover:shadow-neon-sm;
+           hover:scale-[1.02] hover:border-primary/30 hover:shadow-soft;
   }
 
   .feature-card {
@@ -68,13 +68,13 @@ body {
   }
 
   .gradient-text {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-neon to-neon/70 animate-gradient;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary-light animate-gradient;
   }
 
   .step-number {
-    @apply w-12 h-12 bg-neon rounded-lg flex items-center justify-center text-dark font-bold mb-4
+    @apply w-12 h-12 bg-primary rounded-lg flex items-center justify-center text-light font-bold mb-4
            transition-all duration-300 ease-in-out
-           hover:shadow-neon hover:scale-110;
+           hover:shadow-soft hover:scale-110;
   }
 
   .microcopy {
@@ -82,8 +82,37 @@ body {
   }
 
   .value-callout {
-    @apply bg-dark-card border border-neon/20 rounded-xl p-6
+    @apply bg-neutral-card border border-primary/20 rounded-xl p-6
            transition-all duration-300 ease-in-out
-           hover:border-neon/40 hover:shadow-neon-sm;
+           hover:border-primary/40 hover:shadow-soft;
+  }
+
+  /* Pricing page specific styles */
+  .pricing-card {
+    @apply card p-8 relative overflow-visible hover:border-primary/50 transition-all duration-300 flex flex-col;
+  }
+
+  .pricing-card.group {
+    @apply hover:border-primary/50;
+  }
+
+  .pricing-popular {
+    @apply absolute -top-6 left-1/2 -translate-x-1/2 bg-neutral-card px-6 py-2 rounded-lg border border-primary/20 shadow-lg;
+  }
+
+  .pricing-feature {
+    @apply flex items-start gap-3;
+  }
+
+  .pricing-feature-icon {
+    @apply w-5 h-5 text-primary mt-1 flex-shrink-0;
+  }
+
+  .pricing-feature-text {
+    @apply text-light/70;
+  }
+
+  .pricing-section {
+    @apply bg-neutral-card rounded-xl border border-neutral-border p-8;
   }
 }
