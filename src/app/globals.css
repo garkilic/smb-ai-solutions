@@ -10,6 +10,17 @@
   --background-end-rgb: 17, 24, 39;
 }
 
+/* Base responsive styles */
+html {
+  font-size: 16px;
+}
+
+@media (max-width: 640px) {
+  html {
+    font-size: 14px;
+  }
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -18,53 +29,68 @@ body {
     rgb(var(--background-end-rgb))
   );
   min-height: 100vh;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Touch-friendly styles */
+@media (hover: none) {
+  .hover\:scale-\[1\.02\]:hover {
+    transform: none !important;
+  }
+  
+  .hover\:shadow-soft:hover {
+    box-shadow: none !important;
+  }
 }
 
 @layer components {
   .btn-primary {
-    @apply px-6 py-3 bg-primary text-light rounded-lg font-medium 
+    @apply px-4 sm:px-6 py-2.5 sm:py-3 bg-primary text-light rounded-lg font-medium 
            transition-all duration-300 ease-in-out
            hover:bg-primary-dark hover:shadow-soft hover:scale-[1.02]
-           focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-neutral;
+           focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-neutral
+           active:scale-[0.98];
   }
 
   .btn-secondary {
-    @apply px-6 py-3 border border-primary text-primary rounded-lg font-medium
+    @apply px-4 sm:px-6 py-2.5 sm:py-3 border border-primary text-primary rounded-lg font-medium
            transition-all duration-300 ease-in-out
            hover:bg-primary/10 hover:shadow-soft
-           focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-neutral;
+           focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-neutral
+           active:scale-[0.98];
   }
   
   .section-padding {
-    @apply py-16 md:py-24;
+    @apply py-12 sm:py-16 lg:py-20 xl:py-24;
   }
   
   .container-custom {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+    @apply w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
 
   .card {
     @apply bg-neutral-card border border-neutral-border rounded-xl
            transition-all duration-300 ease-in-out
-           hover:scale-[1.02] hover:border-primary/30 hover:shadow-soft;
+           hover:scale-[1.02] hover:border-primary/30 hover:shadow-soft
+           active:scale-[0.98];
   }
 
   .feature-card {
-    @apply card p-8 relative overflow-hidden
+    @apply card p-4 sm:p-6 lg:p-8 relative overflow-hidden
            before:absolute before:inset-0 before:bg-gradient-shine before:opacity-0
            hover:before:opacity-100 before:transition-opacity before:duration-500;
   }
 
   .heading-xl {
-    @apply text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight;
+    @apply text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight;
   }
 
   .heading-lg {
-    @apply text-3xl md:text-4xl font-bold tracking-tight;
+    @apply text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight;
   }
 
   .heading-md {
-    @apply text-2xl font-semibold tracking-tight;
+    @apply text-xl sm:text-2xl font-semibold tracking-tight;
   }
 
   .gradient-text {
@@ -72,24 +98,26 @@ body {
   }
 
   .step-number {
-    @apply w-12 h-12 bg-primary rounded-lg flex items-center justify-center text-light font-bold mb-4
+    @apply w-10 h-10 sm:w-12 sm:h-12 bg-primary rounded-lg flex items-center justify-center text-light font-bold mb-4
            transition-all duration-300 ease-in-out
-           hover:shadow-soft hover:scale-110;
+           hover:shadow-soft hover:scale-110
+           active:scale-95;
   }
 
   .microcopy {
-    @apply text-sm text-light/60 mt-2;
+    @apply text-xs sm:text-sm text-light/60 mt-2;
   }
 
   .value-callout {
-    @apply bg-neutral-card border border-primary/20 rounded-xl p-6
+    @apply bg-neutral-card border border-primary/20 rounded-xl p-4 sm:p-6 lg:p-8
            transition-all duration-300 ease-in-out
-           hover:border-primary/40 hover:shadow-soft;
+           hover:border-primary/40 hover:shadow-soft
+           active:scale-[0.98];
   }
 
   /* Pricing page specific styles */
   .pricing-card {
-    @apply card p-8 relative overflow-visible hover:border-primary/50 transition-all duration-300 flex flex-col;
+    @apply card p-4 sm:p-6 lg:p-8 relative overflow-visible hover:border-primary/50 transition-all duration-300 flex flex-col;
   }
 
   .pricing-card.group {
@@ -97,22 +125,75 @@ body {
   }
 
   .pricing-popular {
-    @apply absolute -top-6 left-1/2 -translate-x-1/2 bg-neutral-card px-6 py-2 rounded-lg border border-primary/20 shadow-lg;
+    @apply absolute -top-4 sm:-top-6 left-1/2 -translate-x-1/2 bg-neutral-card px-4 sm:px-6 py-2 rounded-lg border border-primary/20 shadow-lg;
   }
 
   .pricing-feature {
-    @apply flex items-start gap-3;
+    @apply flex items-start gap-2 sm:gap-3;
   }
 
   .pricing-feature-icon {
-    @apply w-5 h-5 text-primary mt-1 flex-shrink-0;
+    @apply w-4 h-4 sm:w-5 sm:h-5 text-primary mt-1 flex-shrink-0;
   }
 
   .pricing-feature-text {
-    @apply text-light/70;
+    @apply text-sm sm:text-base text-light/70;
   }
 
   .pricing-section {
-    @apply bg-neutral-card rounded-xl border border-neutral-border p-8;
+    @apply bg-neutral-card rounded-xl border border-neutral-border p-4 sm:p-6 lg:p-8;
+  }
+}
+
+/* Responsive image styles */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive grid layouts */
+.grid-responsive {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8;
+}
+
+/* Responsive spacing utilities */
+.space-y-responsive {
+  @apply space-y-4 sm:space-y-6 lg:space-y-8;
+}
+
+.space-x-responsive {
+  @apply space-x-4 sm:space-x-6 lg:space-x-8;
+}
+
+/* Responsive text alignment */
+.text-responsive {
+  @apply text-center lg:text-left;
+}
+
+/* Responsive margins and padding */
+.m-responsive {
+  @apply m-4 sm:m-6 lg:m-8;
+}
+
+.p-responsive {
+  @apply p-4 sm:p-6 lg:p-8;
+}
+
+/* Tablet-specific styles */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .container-custom {
+    @apply px-6;
+  }
+
+  .grid-responsive {
+    @apply grid-cols-1 gap-6;
+  }
+
+  .text-responsive {
+    @apply text-center;
+  }
+
+  .section-padding {
+    @apply py-16;
   }
 }

@@ -13,6 +13,12 @@ export const metadata: Metadata = {
     icon: '/myfavicon.ico',
     apple: '/myfavicon.ico',
   },
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 1,
+    userScalable: false,
+  },
 };
 
 export default function RootLayout({
@@ -22,9 +28,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${inter.className} antialiased min-h-screen bg-neutral`}>
+      <body className={`${inter.className} antialiased min-h-screen bg-neutral overflow-x-hidden`}>
         <Navigation />
-        <main className="pt-20">
+        <main className="pt-16 md:pt-20">
           {children}
         </main>
         <Script
