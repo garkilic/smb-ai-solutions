@@ -18,7 +18,8 @@ import {
   FaTools,
   FaHandshake,
   FaFileAlt,
-  FaHeart
+  FaHeart,
+  FaTimesCircle
 } from 'react-icons/fa';
 import { Metadata } from 'next';
 import FormModalWrapper from '@/components/FormModalWrapper';
@@ -37,219 +38,151 @@ export default function Home() {
     <main className="min-h-screen">
       <TallyFormModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       <EmailPopup />
-      {/* Hero Section - The Problem */}
+      
+      {/* 1. Above-the-Fold Section */}
       <section className="section-padding bg-gradient-to-b from-neutral to-neutral-light relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-radial from-primary/5 to-transparent opacity-50"></div>
         <div className="container-custom relative">
           <div className="max-w-3xl mx-auto text-center px-4 sm:px-6">
-            <motion.div 
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.5 }}
-              className="flex justify-center mb-4 sm:mb-6"
-            >
-              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-primary/10 rounded-full flex items-center justify-center">
-                <FaQuestionCircle className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
-              </div>
-            </motion.div>
             <motion.h1 
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
+              transition={{ duration: 0.5 }}
               className="heading-xl text-light-brighter mb-4 sm:mb-6"
             >
-              AI is Everywhere.<br />
-              But Where Do You Start?
+              AI Implementation That Actually Works
             </motion.h1>
             <motion.p 
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              className="text-lg sm:text-xl text-light/80 mb-6 sm:mb-8"
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="text-xl text-light/80 mb-8 max-w-2xl"
             >
-              Everyone's talking about AI, but for small business owners, it's overwhelming. You want to stay competitive, but you don't know who to trust or what tools to use. Sound familiar?
+              No consultants, no classes, no unnecessary tools.
+              <br />
+              Just clear AI workflows that your team can start using today.
             </motion.p>
             <motion.div 
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.6 }}
-              className="mb-6 sm:mb-8 p-3 sm:p-4 bg-neutral-card rounded-lg border border-neutral-border hover:border-primary/50 transition-colors"
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="mb-6 sm:mb-8"
             >
-              <p className="text-primary font-medium text-sm sm:text-base">
-                "You don't need to be a tech expert to use AI. You just need the right guide."
-              </p>
+              <FormModalWrapper buttonText="Get Your Free AI Workflow Audit" />
+              <p className="microcopy mt-2">Takes 2–3 minutes. No technical knowledge required.</p>
             </motion.div>
-            <motion.div
+            <motion.div 
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.8 }}
-              className="space-y-4"
+              transition={{ duration: 0.5, delay: 0.6 }}
+              className="flex justify-center items-center gap-8 mt-8"
             >
-              <FormModalWrapper buttonText="Get Your Free AI Audit" />
-              <p className="microcopy">Takes 2–3 minutes. No technical knowledge required.</p>
+              <div className="flex items-center gap-8 mt-8">
+                <div className="flex items-center gap-2">
+                  <FaCheckCircle className="w-5 h-5 text-primary" />
+                  <span className="text-light/80">Ready to help small businesses</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <FaCheckCircle className="w-5 h-5 text-primary" />
+                  <span className="text-light/80">Proven AI implementation process</span>
+                </div>
+              </div>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="section-padding bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent opacity-30"></div>
-        <div className="container-custom relative">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-              <motion.div 
-                initial={{ x: -50, opacity: 0 }}
-                whileInView={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-                className="text-center lg:text-left max-w-xl mx-auto lg:mx-0"
-              >
-                <h2 className="heading-lg mb-4 sm:mb-6 text-white">
-                  Ready to Transform Your Business?
-                </h2>
-                <p className="text-lg sm:text-xl text-neutral-300 mb-6 sm:mb-8">
-                  Get started with your free AI audit and discover how Solution Threads can help you save time and improve results.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center lg:justify-start">
-                  <motion.button 
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    onClick={() => setIsModalOpen(true)} 
-                    className="inline-flex items-center justify-center px-6 sm:px-10 py-3 sm:py-4 border border-transparent text-base sm:text-lg font-medium rounded-lg text-white bg-primary hover:bg-primary/90 transition-colors whitespace-nowrap"
-                  >
-                    Get Your Free AI Audit
-                  </motion.button>
-                  <motion.div
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    <Link 
-                      href="/pricing" 
-                      className="inline-flex items-center justify-center px-6 sm:px-10 py-3 sm:py-4 border border-white/20 text-base sm:text-lg font-medium rounded-lg text-white hover:bg-white/10 transition-colors whitespace-nowrap"
-                    >
-                      View Pricing
-                    </Link>
-                  </motion.div>
-                </div>
-              </motion.div>
-              <motion.div 
-                initial={{ x: 50, opacity: 0 }}
-                whileInView={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-                className="relative max-w-xl mx-auto lg:mx-0 lg:justify-self-end mt-8 lg:mt-0"
-              >
-                <div className="absolute inset-0 bg-gradient-radial from-primary/20 to-transparent opacity-50"></div>
-                <div className="relative bg-neutral-800/50 backdrop-blur-sm rounded-2xl p-4 sm:p-6 lg:p-8 border border-white/10 hover:border-primary/30 transition-colors">
-                  <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
-                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                      <FaRocket className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
-                    </div>
-                    <h3 className="text-lg sm:text-xl font-semibold text-white">Quick Start Guide</h3>
-                  </div>
-                  <ul className="space-y-3 sm:space-y-4">
-                    <motion.li 
-                      initial={{ x: -20, opacity: 0 }}
-                      whileInView={{ x: 0, opacity: 1 }}
-                      transition={{ duration: 0.3, delay: 0.1 }}
-                      viewport={{ once: true }}
-                      className="flex items-start gap-2 sm:gap-3"
-                    >
-                      <FaCheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-primary mt-1" />
-                      <span className="text-sm sm:text-base text-neutral-300">Get your free AI audit in one week</span>
-                    </motion.li>
-                    <motion.li 
-                      initial={{ x: -20, opacity: 0 }}
-                      whileInView={{ x: 0, opacity: 1 }}
-                      transition={{ duration: 0.3, delay: 0.2 }}
-                      viewport={{ once: true }}
-                      className="flex items-start gap-2 sm:gap-3"
-                    >
-                      <FaCheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-primary mt-1" />
-                      <span className="text-sm sm:text-base text-neutral-300">Receive 3 popular Solution Threads</span>
-                    </motion.li>
-                    <motion.li 
-                      initial={{ x: -20, opacity: 0 }}
-                      whileInView={{ x: 0, opacity: 1 }}
-                      transition={{ duration: 0.3, delay: 0.3 }}
-                      viewport={{ once: true }}
-                      className="flex items-start gap-2 sm:gap-3"
-                    >
-                      <FaCheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-primary mt-1" />
-                      <span className="text-sm sm:text-base text-neutral-300">Start implementing AI today</span>
-                    </motion.li>
-                  </ul>
-                </div>
-              </motion.div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* The Solution Section */}
+      {/* 2. Problem-Solution Section */}
       <section className="section-padding bg-neutral">
         <div className="container-custom">
-          <motion.div 
-            initial={{ y: 20, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="text-center max-w-3xl mx-auto mb-12 sm:mb-16"
-          >
-            <h2 className="heading-lg mb-4 sm:mb-6">
-              The Solution: AI-First Operations
-            </h2>
-            <p className="text-lg sm:text-xl text-light/80">
-              We help small businesses implement practical AI solutions that deliver real results, not just hype.
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            <motion.div
-              initial={{ y: 20, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <motion.div 
+              initial={{ x: -50, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.5 }}
               viewport={{ once: true }}
+              className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 flex flex-col h-full"
             >
-              <FeatureCard
-                icon={FaUserTie}
-                title="Business-First Approach"
-                description="We start with your business goals, not the technology. Every AI solution is tailored to your specific needs."
-                actionText="Focus on what matters to you"
-              />
+              <div className="flex-grow">
+                <h2 className="heading-lg mb-6 text-white">The Problem</h2>
+                <p className="text-lg text-light/80 mb-6">
+                  You've tried learning AI tools, but there's too much to know. Your team struggles to implement them effectively, and you're not seeing the promised results.
+                </p>
+                <ul className="space-y-4">
+                  <li className="flex items-start gap-3">
+                    <FaTimesCircle className="w-5 h-5 text-red-500 mt-1" />
+                    <span className="text-light/80">Inconsistent results from AI tools</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <FaTimesCircle className="w-5 h-5 text-red-500 mt-1" />
+                    <span className="text-light/80">Team members can't reliably use AI</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <FaTimesCircle className="w-5 h-5 text-red-500 mt-1" />
+                    <span className="text-light/80">No clear process for AI implementation</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <FaTimesCircle className="w-5 h-5 text-red-500 mt-1" />
+                    <span className="text-light/80">Too many tools to learn and manage</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <FaTimesCircle className="w-5 h-5 text-red-500 mt-1" />
+                    <span className="text-light/80">Wasted time on trial and error</span>
+                  </li>
+                </ul>
+              </div>
             </motion.div>
-            <motion.div
-              initial={{ y: 20, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
+            <motion.div 
+              initial={{ x: 50, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.5 }}
               viewport={{ once: true }}
+              className="bg-primary/10 backdrop-blur-sm rounded-2xl p-8 border border-primary/20 flex flex-col h-full"
             >
-              <FeatureCard
-                icon={FaTools}
-                title="Custom Threads"
-                description="Clear, step-by-step processes that anyone on your team can follow. No technical jargon, just results."
-                actionText="Easy to implement and scale"
-              />
-            </motion.div>
-            <motion.div
-              initial={{ y: 20, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              viewport={{ once: true }}
-            >
-              <FeatureCard
-                icon={FaHandshake}
-                title="Ongoing Support"
-                description="We're here for the long haul. Get help when you need it, whether it's a quick question or a major update."
-                actionText="Never feel alone with AI"
-              />
+              <div className="flex-grow">
+                <h2 className="heading-lg mb-6 text-white">Our Solution</h2>
+                <p className="text-lg text-light/80 mb-6">
+                  We handle all the tools and processes for you. Your team just needs to execute. Simple, clear AI workflows that deliver real results.
+                </p>
+                <ul className="space-y-4">
+                  <li className="flex items-start gap-3">
+                    <FaCheckCircle className="w-5 h-5 text-primary mt-1" />
+                    <span className="text-light/80">Ready-to-use AI workflows</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <FaCheckCircle className="w-5 h-5 text-primary mt-1" />
+                    <span className="text-light/80">No technical setup required</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <FaCheckCircle className="w-5 h-5 text-primary mt-1" />
+                    <span className="text-light/80">Immediate value from day one</span>
+                  </li>
+                </ul>
+              </div>
+              <div className="mt-8 pt-6 border-t border-primary/20">
+                <div className="flex items-center gap-4 mb-3">
+                  <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
+                    <FaFileAlt className="w-5 h-5 text-primary" />
+                  </div>
+                  <h3 className="font-semibold text-white">See It In Action</h3>
+                </div>
+                <p className="text-light/80 mb-4">
+                  Check out how we transformed a complex content creation process into a simple, repeatable AI workflow.
+                </p>
+                <Link 
+                  href="/thread-example" 
+                  className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors"
+                >
+                  View Example Workflow
+                  <FaArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* How It Works Section */}
+      {/* 3. Offer & Process Section */}
       <section className="section-padding bg-neutral-light">
         <div className="container-custom">
           <motion.div 
@@ -259,42 +192,110 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <motion.div 
-              className="flex justify-center mb-6"
-            >
-              <FaRobot className="w-12 h-12 text-primary" />
-            </motion.div>
-            <h2 className="heading-lg mb-6">How It Works</h2>
+            <h2 className="heading-lg mb-6">Simple 3-Step Process</h2>
             <p className="text-xl text-light/80 max-w-3xl mx-auto">
-              We combine the power of AI with human expertise to create efficient, reliable processes for your business. Here's how we do it:
+              We provide maximum value upfront, making it easy to see the impact before committing
             </p>
           </motion.div>
 
-          <motion.div 
-            initial={{ y: 20, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="max-w-4xl mx-auto"
-          >
-            <ThreadExample />
-          </motion.div>
+          <div className="max-w-4xl mx-auto">
+            <div className="relative">
+              <div className="space-y-12">
+                <motion.div
+                  initial={{ y: 20, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  transition={{ duration: 0.5, delay: 0.1 }}
+                  viewport={{ once: true }}
+                  className="relative flex justify-center"
+                >
+                  <div className="flex items-center gap-8">
+                    <div className="w-16 h-16 rounded-full bg-white border-4 border-primary/20 flex items-center justify-center flex-shrink-0">
+                      <span className="text-2xl font-bold text-primary">1</span>
+                    </div>
+                    <div className="bg-white rounded-xl p-6 border border-neutral-200 shadow-sm w-[500px] min-h-[180px] flex flex-col">
+                      <h3 className="font-semibold text-neutral-900 mb-4 text-center">Quick Assessment</h3>
+                      <ul className="space-y-3 flex-grow">
+                        <li className="flex items-start gap-3">
+                          <FaCheckCircle className="w-5 h-5 text-primary mt-1" />
+                          <span className="text-neutral-600">Fill out a brief questionnaire about your business needs</span>
+                        </li>
+                        <li className="flex items-start gap-3">
+                          <FaCheckCircle className="w-5 h-5 text-primary mt-1" />
+                          <span className="text-neutral-600">15-minute call with our founder to understand your goals</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </motion.div>
 
-          <motion.div 
-            initial={{ y: 20, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="mt-12 text-center"
-          >
-            <p className="text-light/80 mb-6">
-              This is just one example. We create custom processes for your specific needs, with clear instructions and human oversight at every step.
-            </p>
-          </motion.div>
+                <motion.div
+                  initial={{ y: 20, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                  viewport={{ once: true }}
+                  className="relative flex justify-center"
+                >
+                  <div className="flex items-center gap-8">
+                    <div className="w-16 h-16 rounded-full bg-white border-4 border-primary/20 flex items-center justify-center flex-shrink-0">
+                      <span className="text-2xl font-bold text-primary">2</span>
+                    </div>
+                    <div className="bg-white rounded-xl p-6 border border-neutral-200 shadow-sm w-[500px] min-h-[180px] flex flex-col">
+                      <h3 className="font-semibold text-neutral-900 mb-4 text-center">Free Implementation</h3>
+                      <ul className="space-y-3 flex-grow">
+                        <li className="flex items-start gap-3">
+                          <FaCheckCircle className="w-5 h-5 text-primary mt-1" />
+                          <span className="text-neutral-600">Receive a detailed audit of your current workflows</span>
+                        </li>
+                        <li className="flex items-start gap-3">
+                          <FaCheckCircle className="w-5 h-5 text-primary mt-1" />
+                          <span className="text-neutral-600">Get three popular AI threads you can use right away</span>
+                        </li>
+                        <li className="flex items-start gap-3">
+                          <FaCheckCircle className="w-5 h-5 text-primary mt-1" />
+                          <span className="text-neutral-600">Consultation to discuss implementation and results</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </motion.div>
+
+                <motion.div
+                  initial={{ y: 20, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  transition={{ duration: 0.5, delay: 0.3 }}
+                  viewport={{ once: true }}
+                  className="relative flex justify-center"
+                >
+                  <div className="flex items-center gap-8">
+                    <div className="w-16 h-16 rounded-full bg-white border-4 border-primary/20 flex items-center justify-center flex-shrink-0">
+                      <span className="text-2xl font-bold text-primary">3</span>
+                    </div>
+                    <div className="bg-white rounded-xl p-6 border border-neutral-200 shadow-sm w-[500px] min-h-[180px] flex flex-col">
+                      <h3 className="font-semibold text-neutral-900 mb-4 text-center">Full Implementation</h3>
+                      <ul className="space-y-3 flex-grow">
+                        <li className="flex items-start gap-3">
+                          <FaCheckCircle className="w-5 h-5 text-primary mt-1" />
+                          <span className="text-neutral-600">If you love the results, we implement your complete AI system</span>
+                        </li>
+                        <li className="flex items-start gap-3">
+                          <FaCheckCircle className="w-5 h-5 text-primary mt-1" />
+                          <span className="text-neutral-600">Ongoing support and optimization</span>
+                        </li>
+                        <li className="flex items-start gap-3">
+                          <FaCheckCircle className="w-5 h-5 text-primary mt-1" />
+                          <span className="text-neutral-600">Regular check-ins to ensure success</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </motion.div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* The Tools Section */}
+      {/* 4. Social Proof Section */}
       <section className="section-padding bg-neutral">
         <div className="container-custom">
           <motion.div 
@@ -304,63 +305,41 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <motion.div 
-              className="flex justify-center mb-6"
-            >
-              <FaTools className="w-12 h-12 text-primary" />
-            </motion.div>
-            <h2 className="heading-lg mb-6">The Tools You Need</h2>
+            <h2 className="heading-lg mb-6">Built for Small Businesses</h2>
             <p className="text-xl text-light/80 max-w-3xl mx-auto">
-              We use the best AI tools available, but we don't just hand them over. We create custom processes that make them work for your business.
+              We understand the unique challenges small businesses face with AI adoption
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="max-w-3xl mx-auto">
             <motion.div
               initial={{ y: 20, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.1 }}
               viewport={{ once: true }}
+              className="bg-gradient-to-br from-primary/5 to-primary/10 backdrop-blur-sm rounded-xl p-8 border border-primary/20"
             >
-              <FeatureCard
-                icon={FaRobot}
-                title="AI Tools"
-                description="Access to the best AI tools, set up and configured for your specific needs."
-                actionText="No technical setup required"
-              />
-            </motion.div>
-            <motion.div
-              initial={{ y: 20, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              viewport={{ once: true }}
-            >
-              <FeatureCard
-                icon={FaFileAlt}
-                title="Custom Threads"
-                description="Clear, step-by-step processes that anyone on your team can follow."
-                actionText="Easy to implement and scale"
-              />
-            </motion.div>
-            <motion.div
-              initial={{ y: 20, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              viewport={{ once: true }}
-            >
-              <FeatureCard
-                icon={FaShieldAlt}
-                title="Ongoing Support"
-                description="Get help whenever you need it, whether it's a quick question or a major update."
-                actionText="Never feel stuck"
-              />
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <FaCheckCircle className="w-5 h-5 text-primary mt-1" />
+                  <span className="text-light/80">Exclusive focus on small businesses - we understand your unique needs</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <FaCheckCircle className="w-5 h-5 text-primary mt-1" />
+                  <span className="text-light/80">No complex tools or technical setup required - we handle everything</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <FaCheckCircle className="w-5 h-5 text-primary mt-1" />
+                  <span className="text-light/80">Clear, step-by-step processes anyone on your team can follow</span>
+                </li>
+              </ul>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* SOP Section */}
-      <section className="section-padding bg-white">
+      {/* 5. FAQ Section */}
+      <section className="section-padding bg-neutral-light">
         <div className="container-custom">
           <motion.div 
             initial={{ y: 20, opacity: 0 }}
@@ -369,77 +348,118 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <motion.div 
-              className="flex justify-center mb-6"
-            >
-              <FaFileAlt className="w-12 h-12 text-primary" />
-            </motion.div>
-            <h2 className="heading-lg mb-6 text-neutral-900">Why We're Different</h2>
-            <p className="text-xl text-neutral-600 max-w-2xl mx-auto mb-8">
-              Most AI services focus on automation and replacement. <span className="font-semibold">We believe in empowerment and collaboration.</span> Solution Threads helps your team work smarter with AI, <span className="font-semibold">not be replaced by it.</span> We start with your people, your workflows, and your real business needs.
+            <h2 className="heading-lg mb-6">Common Questions</h2>
+            <p className="text-xl text-light/80 max-w-3xl mx-auto">
+              Everything you need to know about our AI implementation process
             </p>
-            <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-              <motion.div 
-                initial={{ y: 20, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl p-8 border border-neutral-200 shadow-sm hover:shadow-md hover:border-primary/20 transition-all"
-              >
-                <div className="flex items-center gap-4 mb-6">
-                  <motion.div 
-                    className="w-12 h-12 rounded-lg bg-neutral-100 flex items-center justify-center"
-                  >
-                    <FaHeart className="w-6 h-6 text-primary" />
-                  </motion.div>
-                  <h3 className="heading-md text-neutral-900">Human-First Design</h3>
-                </div>
-                <p className="text-neutral-600 leading-relaxed">
-                  We design every solution around your team, not just the technology. Our processes empower your people to do their best work with AI as <span className="font-semibold">a true partner, not a replacement.</span>
-                </p>
-              </motion.div>
-
-              <motion.div 
-                initial={{ y: 20, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl p-8 border border-neutral-200 shadow-sm hover:shadow-md hover:border-primary/20 transition-all"
-              >
-                <div className="flex items-center gap-4 mb-6">
-                  <motion.div 
-                    className="w-12 h-12 rounded-lg bg-neutral-100 flex items-center justify-center"
-                  >
-                    <FaTools className="w-6 h-6 text-primary" />
-                  </motion.div>
-                  <h3 className="heading-md text-neutral-900">Practical Implementation</h3>
-                </div>
-                <p className="text-neutral-600 leading-relaxed">
-                  We don't just hand you a tool and walk away. We build step-by-step, easy-to-follow processes that fit your business and actually get used. <span className="font-semibold">Your team stays in control while AI handles the repetitive tasks.</span>
-                </p>
-              </motion.div>
-
-              <motion.div 
-                initial={{ y: 20, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl p-8 border border-neutral-200 shadow-sm hover:shadow-md hover:border-primary/20 transition-all"
-              >
-                <div className="flex items-center gap-4 mb-6">
-                  <motion.div 
-                    className="w-12 h-12 rounded-lg bg-neutral-100 flex items-center justify-center"
-                  >
-                    <FaHandshake className="w-6 h-6 text-primary" />
-                  </motion.div>
-                  <h3 className="heading-md text-neutral-900">Team Empowerment</h3>
-                </div>
-                <p className="text-neutral-600 leading-relaxed">
-                  <span className="font-semibold">We believe AI should enhance your team's capabilities, not replace them.</span> Our solutions make your team more effective by automating the tedious parts while keeping the human touch where it matters most.
-                </p>
-              </motion.div>
-            </div>
           </motion.div>
+
+          <div className="max-w-3xl mx-auto">
+            <motion.div
+              initial={{ y: 20, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-xl p-8 border border-neutral-200 shadow-lg"
+            >
+              <ul className="space-y-6">
+                <li className="space-y-2">
+                  <h3 className="font-semibold text-neutral-900 flex items-start gap-3">
+                    <FaQuestionCircle className="w-5 h-5 text-primary mt-1" />
+                    What if my team isn't technical?
+                  </h3>
+                  <p className="text-neutral-600 ml-8">
+                    Our AI workflows are designed for non-technical users. We create clear, step-by-step instructions that anyone can follow, regardless of their technical background.
+                  </p>
+                </li>
+
+                <li className="space-y-2">
+                  <h3 className="font-semibold text-neutral-900 flex items-start gap-3">
+                    <FaQuestionCircle className="w-5 h-5 text-primary mt-1" />
+                    How is this different from hiring a consultant?
+                  </h3>
+                  <p className="text-neutral-600 ml-8">
+                    Unlike traditional consultants, we don't just give advice—we create practical, ready-to-use AI workflows that your team can implement immediately.
+                  </p>
+                </li>
+
+                <li className="space-y-2">
+                  <h3 className="font-semibold text-neutral-900 flex items-start gap-3">
+                    <FaQuestionCircle className="w-5 h-5 text-primary mt-1" />
+                    How long does implementation take?
+                  </h3>
+                  <p className="text-neutral-600 ml-8">
+                    Most businesses can implement their first AI workflow within 2 weeks. We work at your pace and ensure everything is working smoothly before moving forward.
+                  </p>
+                </li>
+
+                <li className="space-y-2">
+                  <h3 className="font-semibold text-neutral-900 flex items-start gap-3">
+                    <FaQuestionCircle className="w-5 h-5 text-primary mt-1" />
+                    What kind of support do you provide?
+                  </h3>
+                  <p className="text-neutral-600 ml-8">
+                    We provide ongoing support through email, chat, and regular check-ins. We're here to help your team succeed with AI, every step of the way.
+                  </p>
+                </li>
+
+                <li className="space-y-2">
+                  <h3 className="font-semibold text-neutral-900 flex items-start gap-3">
+                    <FaQuestionCircle className="w-5 h-5 text-primary mt-1" />
+                    What's included in the free audit?
+                  </h3>
+                  <p className="text-neutral-600 ml-8">
+                    You'll receive a detailed analysis of your current workflows, three free AI workflows tailored to your business, and a consultation to discuss implementation.
+                  </p>
+                </li>
+              </ul>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA Section */}
+      <section className="section-padding bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent opacity-30"></div>
+        <div className="container-custom relative">
+          <div className="max-w-3xl mx-auto text-center">
+            <motion.h2 
+              initial={{ y: 20, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+              className="heading-lg text-white mb-6"
+            >
+              Ready to Transform Your Business with AI?
+            </motion.h2>
+            <motion.p 
+              initial={{ y: 20, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="text-xl text-neutral-300 mb-8"
+            >
+              Start with a free audit and three AI workflows. No strings attached.
+            </motion.p>
+            <motion.div
+              initial={{ y: 20, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="space-y-4"
+            >
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <FormModalWrapper buttonText="Get Your Free AI Workflow Audit" />
+                <Link 
+                  href="/pricing" 
+                  className="inline-flex items-center justify-center px-6 sm:px-10 py-3 sm:py-4 border border-white/20 text-base sm:text-lg font-medium rounded-lg text-white hover:bg-white/10 transition-colors whitespace-nowrap"
+                >
+                  View Pricing
+                </Link>
+              </div>
+              <p className="text-sm text-neutral-400">No credit card required. Takes 2-3 minutes.</p>
+            </motion.div>
+          </div>
         </div>
       </section>
     </main>
