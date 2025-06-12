@@ -151,24 +151,6 @@ export default function ThreadExamplePage() {
             </div>
           </motion.div>
         </div>
-
-        {/* What Can Solution Threads Do For You? */}
-        <div className="mt-12 max-w-3xl mx-auto text-center">
-          <h3 className="text-2xl font-bold text-primary mb-4">What Can Solution Threads Do For You?</h3>
-          <p className="text-neutral-700 mb-4">
-            Solution Threads can be tailored to automate, standardize, and supercharge a wide range of business processes. Here are just a few examples:
-          </p>
-          <ul className="list-disc list-inside text-neutral-700 text-left mx-auto inline-block">
-            <li>Manage your work with an MCP server</li>
-            <li>Automate client onboarding and follow-up</li>
-            <li>Streamline invoice and payment processing</li>
-            <li>Develop amazing content to grow your audience by 500%</li>
-            <li>Standardize employee training and SOPs</li>
-            <li>Coordinate multi-channel marketing campaigns</li>
-            <li>Track and optimize project progress</li>
-            <li>And much more—if you have a workflow, we can build a thread for it!</li>
-          </ul>
-        </div>
       </div>
 
       {/* Detailed Thread Example */}

@@ -216,8 +216,7 @@ export default function PricingPage() {
           >
             <div className="flex items-center gap-4 mb-6">
               <motion.div
-                whileHover={{ rotate: 360 }}
-                transition={{ duration: 0.5 }}
+                className="w-8 h-8 text-primary"
               >
                 <FaHandshake className="w-8 h-8 text-primary" />
               </motion.div>
@@ -253,7 +252,7 @@ export default function PricingPage() {
                 </ul>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-light-brighter mb-4">$2,997<span className="text-xl">/mo</span></div>
+                <div className="text-4xl font-bold text-light-brighter mb-4">$3,997<span className="text-xl">/mo</span></div>
                 <p className="text-red-500 font-medium mb-4">Only 4 spots available</p>
                 <motion.button 
                   whileHover={{ scale: 1.05 }}

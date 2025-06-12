@@ -48,7 +48,7 @@ export default function Home() {
               transition={{ duration: 0.5 }}
               className="flex justify-center mb-4 sm:mb-6"
             >
-              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-primary/10 rounded-full flex items-center justify-center animate-float">
+              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-primary/10 rounded-full flex items-center justify-center">
                 <FaQuestionCircle className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
               </div>
             </motion.div>
@@ -143,13 +143,9 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-radial from-primary/20 to-transparent opacity-50"></div>
                 <div className="relative bg-neutral-800/50 backdrop-blur-sm rounded-2xl p-4 sm:p-6 lg:p-8 border border-white/10 hover:border-primary/30 transition-colors">
                   <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
-                    <motion.div 
-                      whileHover={{ rotate: 360 }}
-                      transition={{ duration: 0.5 }}
-                      className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-primary/10 flex items-center justify-center"
-                    >
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-primary/10 flex items-center justify-center">
                       <FaRocket className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
-                    </motion.div>
+                    </div>
                     <h3 className="text-lg sm:text-xl font-semibold text-white">Quick Start Guide</h3>
                   </div>
                   <ul className="space-y-3 sm:space-y-4">
@@ -264,8 +260,6 @@ export default function Home() {
             className="text-center mb-16"
           >
             <motion.div 
-              whileHover={{ rotate: 360 }}
-              transition={{ duration: 0.5 }}
               className="flex justify-center mb-6"
             >
               <FaRobot className="w-12 h-12 text-primary" />
@@ -311,8 +305,6 @@ export default function Home() {
             className="text-center mb-16"
           >
             <motion.div 
-              whileHover={{ rotate: 360 }}
-              transition={{ duration: 0.5 }}
               className="flex justify-center mb-6"
             >
               <FaTools className="w-12 h-12 text-primary" />
@@ -378,15 +370,13 @@ export default function Home() {
             className="text-center mb-16"
           >
             <motion.div 
-              whileHover={{ rotate: 360 }}
-              transition={{ duration: 0.5 }}
-              className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-neutral-100 mb-6"
+              className="flex justify-center mb-6"
             >
-              <FaFileAlt className="w-8 h-8 text-neutral-900" />
+              <FaFileAlt className="w-12 h-12 text-primary" />
             </motion.div>
             <h2 className="heading-lg mb-6 text-neutral-900">Why We're Different</h2>
             <p className="text-xl text-neutral-600 max-w-2xl mx-auto mb-8">
-              Most AI services for small businesses focus on selling tools or automation for its own sake. Solution Threads is different: we start with your people, your workflows, and your real business needs. Our approach is human-first, not tech-first.
+              Most AI services focus on automation and replacement. <span className="font-semibold">We believe in empowerment and collaboration.</span> Solution Threads helps your team work smarter with AI, <span className="font-semibold">not be replaced by it.</span> We start with your people, your workflows, and your real business needs.
             </p>
             <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
               <motion.div 
@@ -398,8 +388,6 @@ export default function Home() {
               >
                 <div className="flex items-center gap-4 mb-6">
                   <motion.div 
-                    whileHover={{ rotate: 360 }}
-                    transition={{ duration: 0.5 }}
                     className="w-12 h-12 rounded-lg bg-neutral-100 flex items-center justify-center"
                   >
                     <FaHeart className="w-6 h-6 text-primary" />
@@ -407,7 +395,7 @@ export default function Home() {
                   <h3 className="heading-md text-neutral-900">Human-First Design</h3>
                 </div>
                 <p className="text-neutral-600 leading-relaxed">
-                  We design every solution around your team, not just the technology. Our processes empower your people to do their best work with AI as a true partner.
+                  We design every solution around your team, not just the technology. Our processes empower your people to do their best work with AI as <span className="font-semibold">a true partner, not a replacement.</span>
                 </p>
               </motion.div>
 
@@ -420,8 +408,6 @@ export default function Home() {
               >
                 <div className="flex items-center gap-4 mb-6">
                   <motion.div 
-                    whileHover={{ rotate: 360 }}
-                    transition={{ duration: 0.5 }}
                     className="w-12 h-12 rounded-lg bg-neutral-100 flex items-center justify-center"
                   >
                     <FaTools className="w-6 h-6 text-primary" />
@@ -429,7 +415,7 @@ export default function Home() {
                   <h3 className="heading-md text-neutral-900">Practical Implementation</h3>
                 </div>
                 <p className="text-neutral-600 leading-relaxed">
-                  We don't just hand you a tool and walk away. We build step-by-step, easy-to-follow processes that fit your business and actually get used.
+                  We don't just hand you a tool and walk away. We build step-by-step, easy-to-follow processes that fit your business and actually get used. <span className="font-semibold">Your team stays in control while AI handles the repetitive tasks.</span>
                 </p>
               </motion.div>
 
@@ -442,16 +428,14 @@ export default function Home() {
               >
                 <div className="flex items-center gap-4 mb-6">
                   <motion.div 
-                    whileHover={{ rotate: 360 }}
-                    transition={{ duration: 0.5 }}
                     className="w-12 h-12 rounded-lg bg-neutral-100 flex items-center justify-center"
                   >
-                    <FaChartLine className="w-6 h-6 text-primary" />
+                    <FaHandshake className="w-6 h-6 text-primary" />
                   </motion.div>
-                  <h3 className="heading-md text-neutral-900">Real Results</h3>
+                  <h3 className="heading-md text-neutral-900">Team Empowerment</h3>
                 </div>
                 <p className="text-neutral-600 leading-relaxed">
-                  Our focus is on outcomes, not hype. We measure success by the time you save, the clarity you gain, and the results you see in your business.
+                  <span className="font-semibold">We believe AI should enhance your team's capabilities, not replace them.</span> Our solutions make your team more effective by automating the tedious parts while keeping the human touch where it matters most.
                 </p>
               </motion.div>
             </div>
