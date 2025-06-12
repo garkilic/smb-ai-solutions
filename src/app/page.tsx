@@ -40,7 +40,7 @@ export default function Home() {
       <EmailPopup />
       
       {/* 1. Above-the-Fold Section */}
-      <section className="min-h-[90vh] flex items-center justify-center relative overflow-hidden touch-none">
+      <section className="min-h-[90vh] flex items-center justify-center relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-neutral to-neutral-dark opacity-50"></div>
         <div className="container-custom relative z-10 py-12 sm:py-16">
           <motion.div 
@@ -86,7 +86,7 @@ export default function Home() {
       </section>
 
       {/* 2. Problem-Solution Section */}
-      <section className="py-8 sm:py-12 bg-neutral touch-none -mt-16 sm:-mt-24">
+      <section className="py-8 sm:py-12 bg-neutral -mt-16 sm:-mt-24">
         <div className="container-custom">
           <div className="grid md:grid-cols-2 gap-8 md:gap-12">
             <motion.div 
@@ -176,7 +176,7 @@ export default function Home() {
       </section>
 
       {/* 3. Offer & Process Section */}
-      <section className="section-padding bg-neutral-light touch-none">
+      <section className="section-padding bg-neutral-light">
         <div className="container-custom">
           <motion.div 
             initial={{ y: 20, opacity: 0 }}
@@ -283,7 +283,7 @@ export default function Home() {
       </section>
 
       {/* 4. Social Proof Section */}
-      <section className="section-padding bg-neutral touch-none">
+      <section className="section-padding bg-neutral">
         <div className="container-custom">
           <motion.div 
             initial={{ y: 20, opacity: 0 }}
@@ -326,7 +326,7 @@ export default function Home() {
       </section>
 
       {/* 5. FAQ Section */}
-      <section className="section-padding bg-neutral-light touch-none">
+      <section className="section-padding bg-neutral-light">
         <div className="container-custom">
           <motion.div 
             initial={{ y: 20, opacity: 0 }}
@@ -406,7 +406,7 @@ export default function Home() {
       </section>
 
       {/* 6. Final CTA Section */}
-      <section className="section-padding bg-neutral touch-none">
+      <section className="section-padding bg-neutral">
         <div className="container-custom">
           <motion.div 
             initial={{ y: 20, opacity: 0 }}
