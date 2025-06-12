@@ -40,94 +40,87 @@ export default function Home() {
       <EmailPopup />
       
       {/* 1. Above-the-Fold Section */}
-      <section className="section-padding bg-gradient-to-b from-neutral to-neutral-light relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-radial from-primary/5 to-transparent opacity-50"></div>
-        <div className="container-custom relative">
-          <div className="max-w-3xl mx-auto text-center px-4 sm:px-6">
-            <motion.h1 
-              initial={{ y: 20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.5 }}
-              className="heading-xl text-light-brighter mb-4 sm:mb-6"
-            >
+      <section className="min-h-[90vh] flex items-center justify-center relative overflow-hidden touch-none">
+        <div className="absolute inset-0 bg-gradient-to-b from-neutral to-neutral-dark opacity-50"></div>
+        <div className="container-custom relative z-10 py-12 sm:py-16">
+          <motion.div 
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            className="text-center max-w-3xl mx-auto"
+          >
+            <h1 className="heading-xl mb-6 text-4xl sm:text-5xl md:text-6xl leading-tight">
               AI Implementation That Actually Works
-            </motion.h1>
+            </h1>
             <motion.p 
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-xl text-light/80 mb-8 max-w-2xl"
+              className="text-lg sm:text-xl text-light/80 mb-8 max-w-2xl mx-auto leading-relaxed"
             >
               No consultants, no classes, no unnecessary tools.
-              <br />
+              <br className="hidden sm:block" />
               Just clear AI workflows that your team can start using today.
             </motion.p>
             <motion.div 
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              className="mb-6 sm:mb-8"
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="flex flex-col sm:flex-row justify-center items-center gap-4"
             >
-              <FormModalWrapper buttonText="Get Your Free AI Workflow Audit" />
-              <p className="microcopy mt-2">Takes 2–3 minutes. No technical knowledge required.</p>
+              <Link 
+                href="/audit" 
+                className="btn-primary w-full sm:w-auto text-lg py-4"
+              >
+                Get Free AI Workflow Audit
+              </Link>
+              <Link 
+                href="/pricing" 
+                className="btn-secondary w-full sm:w-auto text-lg py-4"
+              >
+                View Pricing
+              </Link>
             </motion.div>
-            <motion.div 
-              initial={{ y: 20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.6 }}
-              className="flex justify-center items-center gap-8 mt-8"
-            >
-              <div className="flex items-center gap-8 mt-8">
-                <div className="flex items-center gap-2">
-                  <FaCheckCircle className="w-5 h-5 text-primary" />
-                  <span className="text-light/80">Ready to help small businesses</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <FaCheckCircle className="w-5 h-5 text-primary" />
-                  <span className="text-light/80">Proven AI implementation process</span>
-                </div>
-              </div>
-            </motion.div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* 2. Problem-Solution Section */}
-      <section className="section-padding bg-neutral">
+      <section className="py-8 sm:py-12 bg-neutral touch-none -mt-16 sm:-mt-24">
         <div className="container-custom">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12">
             <motion.div 
               initial={{ x: -50, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
-              className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 flex flex-col h-full"
+              className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-white/10 flex flex-col h-full"
             >
               <div className="flex-grow">
-                <h2 className="heading-lg mb-6 text-white">The Problem</h2>
-                <p className="text-lg text-light/80 mb-6">
+                <h2 className="heading-lg mb-6 text-white text-3xl sm:text-4xl">The Problem</h2>
+                <p className="text-lg sm:text-xl text-light/80 mb-8 leading-relaxed">
                   You've tried learning AI tools, but there's too much to know. Your team struggles to implement them effectively, and you're not seeing the promised results.
                 </p>
-                <ul className="space-y-4">
-                  <li className="flex items-start gap-3">
-                    <FaTimesCircle className="w-5 h-5 text-red-500 mt-1" />
-                    <span className="text-light/80">Inconsistent results from AI tools</span>
+                <ul className="space-y-6">
+                  <li className="flex items-start gap-4">
+                    <FaTimesCircle className="w-6 h-6 text-red-500 mt-1" />
+                    <span className="text-light/80 text-lg">Inconsistent results from AI tools</span>
                   </li>
-                  <li className="flex items-start gap-3">
-                    <FaTimesCircle className="w-5 h-5 text-red-500 mt-1" />
-                    <span className="text-light/80">Team members can't reliably use AI</span>
+                  <li className="flex items-start gap-4">
+                    <FaTimesCircle className="w-6 h-6 text-red-500 mt-1" />
+                    <span className="text-light/80 text-lg">Team members can't reliably use AI</span>
                   </li>
-                  <li className="flex items-start gap-3">
-                    <FaTimesCircle className="w-5 h-5 text-red-500 mt-1" />
-                    <span className="text-light/80">No clear process for AI implementation</span>
+                  <li className="flex items-start gap-4">
+                    <FaTimesCircle className="w-6 h-6 text-red-500 mt-1" />
+                    <span className="text-light/80 text-lg">No clear process for AI implementation</span>
                   </li>
-                  <li className="flex items-start gap-3">
-                    <FaTimesCircle className="w-5 h-5 text-red-500 mt-1" />
-                    <span className="text-light/80">Too many tools to learn and manage</span>
+                  <li className="flex items-start gap-4">
+                    <FaTimesCircle className="w-6 h-6 text-red-500 mt-1" />
+                    <span className="text-light/80 text-lg">Too many tools to learn and manage</span>
                   </li>
-                  <li className="flex items-start gap-3">
-                    <FaTimesCircle className="w-5 h-5 text-red-500 mt-1" />
-                    <span className="text-light/80">Wasted time on trial and error</span>
+                  <li className="flex items-start gap-4">
+                    <FaTimesCircle className="w-6 h-6 text-red-500 mt-1" />
+                    <span className="text-light/80 text-lg">Wasted time on trial and error</span>
                   </li>
                 </ul>
               </div>
@@ -137,44 +130,44 @@ export default function Home() {
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
-              className="bg-primary/10 backdrop-blur-sm rounded-2xl p-8 border border-primary/20 flex flex-col h-full"
+              className="bg-primary/10 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-primary/20 flex flex-col h-full"
             >
               <div className="flex-grow">
-                <h2 className="heading-lg mb-6 text-white">Our Solution</h2>
-                <p className="text-lg text-light/80 mb-6">
+                <h2 className="heading-lg mb-6 text-white text-3xl sm:text-4xl">Our Solution</h2>
+                <p className="text-lg sm:text-xl text-light/80 mb-8 leading-relaxed">
                   We handle all the tools and processes for you. Your team just needs to execute. Simple, clear AI workflows that deliver real results.
                 </p>
-                <ul className="space-y-4">
-                  <li className="flex items-start gap-3">
-                    <FaCheckCircle className="w-5 h-5 text-primary mt-1" />
-                    <span className="text-light/80">Ready-to-use AI workflows</span>
+                <ul className="space-y-6">
+                  <li className="flex items-start gap-4">
+                    <FaCheckCircle className="w-6 h-6 text-primary mt-1" />
+                    <span className="text-light/80 text-lg">Ready-to-use AI workflows</span>
                   </li>
-                  <li className="flex items-start gap-3">
-                    <FaCheckCircle className="w-5 h-5 text-primary mt-1" />
-                    <span className="text-light/80">No technical setup required</span>
+                  <li className="flex items-start gap-4">
+                    <FaCheckCircle className="w-6 h-6 text-primary mt-1" />
+                    <span className="text-light/80 text-lg">No technical setup required</span>
                   </li>
-                  <li className="flex items-start gap-3">
-                    <FaCheckCircle className="w-5 h-5 text-primary mt-1" />
-                    <span className="text-light/80">Immediate value from day one</span>
+                  <li className="flex items-start gap-4">
+                    <FaCheckCircle className="w-6 h-6 text-primary mt-1" />
+                    <span className="text-light/80 text-lg">Immediate value from day one</span>
                   </li>
                 </ul>
               </div>
               <div className="mt-8 pt-6 border-t border-primary/20">
-                <div className="flex items-center gap-4 mb-3">
-                  <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
-                    <FaFileAlt className="w-5 h-5 text-primary" />
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
+                    <FaFileAlt className="w-6 h-6 text-primary" />
                   </div>
-                  <h3 className="font-semibold text-white">See It In Action</h3>
+                  <h3 className="font-semibold text-white text-xl">See It In Action</h3>
                 </div>
-                <p className="text-light/80 mb-4">
+                <p className="text-light/80 text-lg mb-6 leading-relaxed">
                   Check out how we transformed a complex content creation process into a simple, repeatable AI workflow.
                 </p>
                 <Link 
                   href="/thread-example" 
-                  className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors"
+                  className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors text-lg"
                 >
                   View Example Workflow
-                  <FaArrowRight className="w-4 h-4" />
+                  <FaArrowRight className="w-5 h-5" />
                 </Link>
               </div>
             </motion.div>
@@ -183,48 +176,46 @@ export default function Home() {
       </section>
 
       {/* 3. Offer & Process Section */}
-      <section className="section-padding bg-neutral-light">
+      <section className="section-padding bg-neutral-light touch-none">
         <div className="container-custom">
           <motion.div 
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center mb-12"
           >
-            <h2 className="heading-lg mb-6">Simple 3-Step Process</h2>
-            <p className="text-xl text-light/80 max-w-3xl mx-auto">
+            <h2 className="heading-lg mb-6 text-3xl sm:text-4xl">Simple 3-Step Process</h2>
+            <p className="text-lg sm:text-xl text-light/80 max-w-3xl mx-auto px-4 leading-relaxed">
               We provide maximum value upfront, making it easy to see the impact before committing
             </p>
           </motion.div>
 
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-4xl mx-auto px-4">
             <div className="relative">
-              <div className="space-y-12">
+              <div className="space-y-12 md:space-y-16">
                 <motion.div
                   initial={{ y: 20, opacity: 0 }}
                   whileInView={{ y: 0, opacity: 1 }}
                   transition={{ duration: 0.5, delay: 0.1 }}
                   viewport={{ once: true }}
-                  className="relative flex justify-center"
+                  className="relative flex flex-col md:flex-row justify-center items-center md:items-start gap-6 md:gap-8"
                 >
-                  <div className="flex items-center gap-8">
-                    <div className="w-16 h-16 rounded-full bg-white border-4 border-primary/20 flex items-center justify-center flex-shrink-0">
-                      <span className="text-2xl font-bold text-primary">1</span>
-                    </div>
-                    <div className="bg-white rounded-xl p-6 border border-neutral-200 shadow-sm w-[500px] min-h-[180px] flex flex-col">
-                      <h3 className="font-semibold text-neutral-900 mb-4 text-center">Quick Assessment</h3>
-                      <ul className="space-y-3 flex-grow">
-                        <li className="flex items-start gap-3">
-                          <FaCheckCircle className="w-5 h-5 text-primary mt-1" />
-                          <span className="text-neutral-600">Fill out a brief questionnaire about your business needs</span>
-                        </li>
-                        <li className="flex items-start gap-3">
-                          <FaCheckCircle className="w-5 h-5 text-primary mt-1" />
-                          <span className="text-neutral-600">15-minute call with our founder to understand your goals</span>
-                        </li>
-                      </ul>
-                    </div>
+                  <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-white border-4 border-primary/20 flex items-center justify-center flex-shrink-0">
+                    <span className="text-3xl md:text-4xl font-bold text-primary">1</span>
+                  </div>
+                  <div className="bg-white rounded-xl p-6 md:p-8 border border-neutral-200 shadow-sm w-full md:w-[500px] min-h-[180px] flex flex-col">
+                    <h3 className="font-semibold text-neutral-900 mb-6 text-xl md:text-2xl text-center">Quick Assessment</h3>
+                    <ul className="space-y-4 flex-grow">
+                      <li className="flex items-start gap-4">
+                        <FaCheckCircle className="w-6 h-6 text-primary mt-1" />
+                        <span className="text-neutral-600 text-lg">Fill out a brief questionnaire about your business needs</span>
+                      </li>
+                      <li className="flex items-start gap-4">
+                        <FaCheckCircle className="w-6 h-6 text-primary mt-1" />
+                        <span className="text-neutral-600 text-lg">15-minute call with our founder to understand your goals</span>
+                      </li>
+                    </ul>
                   </div>
                 </motion.div>
 
@@ -233,29 +224,27 @@ export default function Home() {
                   whileInView={{ y: 0, opacity: 1 }}
                   transition={{ duration: 0.5, delay: 0.2 }}
                   viewport={{ once: true }}
-                  className="relative flex justify-center"
+                  className="relative flex flex-col md:flex-row justify-center items-center md:items-start gap-6 md:gap-8"
                 >
-                  <div className="flex items-center gap-8">
-                    <div className="w-16 h-16 rounded-full bg-white border-4 border-primary/20 flex items-center justify-center flex-shrink-0">
-                      <span className="text-2xl font-bold text-primary">2</span>
-                    </div>
-                    <div className="bg-white rounded-xl p-6 border border-neutral-200 shadow-sm w-[500px] min-h-[180px] flex flex-col">
-                      <h3 className="font-semibold text-neutral-900 mb-4 text-center">Free Implementation</h3>
-                      <ul className="space-y-3 flex-grow">
-                        <li className="flex items-start gap-3">
-                          <FaCheckCircle className="w-5 h-5 text-primary mt-1" />
-                          <span className="text-neutral-600">Receive a detailed audit of your current workflows</span>
-                        </li>
-                        <li className="flex items-start gap-3">
-                          <FaCheckCircle className="w-5 h-5 text-primary mt-1" />
-                          <span className="text-neutral-600">Get three popular AI threads you can use right away</span>
-                        </li>
-                        <li className="flex items-start gap-3">
-                          <FaCheckCircle className="w-5 h-5 text-primary mt-1" />
-                          <span className="text-neutral-600">Consultation to discuss implementation and results</span>
-                        </li>
-                      </ul>
-                    </div>
+                  <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-white border-4 border-primary/20 flex items-center justify-center flex-shrink-0">
+                    <span className="text-3xl md:text-4xl font-bold text-primary">2</span>
+                  </div>
+                  <div className="bg-white rounded-xl p-6 md:p-8 border border-neutral-200 shadow-sm w-full md:w-[500px] min-h-[180px] flex flex-col">
+                    <h3 className="font-semibold text-neutral-900 mb-6 text-xl md:text-2xl text-center">Free Implementation</h3>
+                    <ul className="space-y-4 flex-grow">
+                      <li className="flex items-start gap-4">
+                        <FaCheckCircle className="w-6 h-6 text-primary mt-1" />
+                        <span className="text-neutral-600 text-lg">Receive a detailed audit of your current workflows</span>
+                      </li>
+                      <li className="flex items-start gap-4">
+                        <FaCheckCircle className="w-6 h-6 text-primary mt-1" />
+                        <span className="text-neutral-600 text-lg">Get three popular AI threads you can use right away</span>
+                      </li>
+                      <li className="flex items-start gap-4">
+                        <FaCheckCircle className="w-6 h-6 text-primary mt-1" />
+                        <span className="text-neutral-600 text-lg">Consultation to discuss implementation and results</span>
+                      </li>
+                    </ul>
                   </div>
                 </motion.div>
 
@@ -264,29 +253,27 @@ export default function Home() {
                   whileInView={{ y: 0, opacity: 1 }}
                   transition={{ duration: 0.5, delay: 0.3 }}
                   viewport={{ once: true }}
-                  className="relative flex justify-center"
+                  className="relative flex flex-col md:flex-row justify-center items-center md:items-start gap-6 md:gap-8"
                 >
-                  <div className="flex items-center gap-8">
-                    <div className="w-16 h-16 rounded-full bg-white border-4 border-primary/20 flex items-center justify-center flex-shrink-0">
-                      <span className="text-2xl font-bold text-primary">3</span>
-                    </div>
-                    <div className="bg-white rounded-xl p-6 border border-neutral-200 shadow-sm w-[500px] min-h-[180px] flex flex-col">
-                      <h3 className="font-semibold text-neutral-900 mb-4 text-center">Full Implementation</h3>
-                      <ul className="space-y-3 flex-grow">
-                        <li className="flex items-start gap-3">
-                          <FaCheckCircle className="w-5 h-5 text-primary mt-1" />
-                          <span className="text-neutral-600">If you love the results, we implement your complete AI system</span>
-                        </li>
-                        <li className="flex items-start gap-3">
-                          <FaCheckCircle className="w-5 h-5 text-primary mt-1" />
-                          <span className="text-neutral-600">Ongoing support and optimization</span>
-                        </li>
-                        <li className="flex items-start gap-3">
-                          <FaCheckCircle className="w-5 h-5 text-primary mt-1" />
-                          <span className="text-neutral-600">Regular check-ins to ensure success</span>
-                        </li>
-                      </ul>
-                    </div>
+                  <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-white border-4 border-primary/20 flex items-center justify-center flex-shrink-0">
+                    <span className="text-3xl md:text-4xl font-bold text-primary">3</span>
+                  </div>
+                  <div className="bg-white rounded-xl p-6 md:p-8 border border-neutral-200 shadow-sm w-full md:w-[500px] min-h-[180px] flex flex-col">
+                    <h3 className="font-semibold text-neutral-900 mb-6 text-xl md:text-2xl text-center">Full Implementation</h3>
+                    <ul className="space-y-4 flex-grow">
+                      <li className="flex items-start gap-4">
+                        <FaCheckCircle className="w-6 h-6 text-primary mt-1" />
+                        <span className="text-neutral-600 text-lg">If you love the results, we implement your complete AI system</span>
+                      </li>
+                      <li className="flex items-start gap-4">
+                        <FaCheckCircle className="w-6 h-6 text-primary mt-1" />
+                        <span className="text-neutral-600 text-lg">Ongoing support and optimization</span>
+                      </li>
+                      <li className="flex items-start gap-4">
+                        <FaCheckCircle className="w-6 h-6 text-primary mt-1" />
+                        <span className="text-neutral-600 text-lg">Regular check-ins to ensure success</span>
+                      </li>
+                    </ul>
                   </div>
                 </motion.div>
               </div>
@@ -296,28 +283,28 @@ export default function Home() {
       </section>
 
       {/* 4. Social Proof Section */}
-      <section className="section-padding bg-neutral">
+      <section className="section-padding bg-neutral touch-none">
         <div className="container-custom">
           <motion.div 
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center mb-12"
           >
             <h2 className="heading-lg mb-6">Built for Small Businesses</h2>
-            <p className="text-xl text-light/80 max-w-3xl mx-auto">
+            <p className="text-xl text-light/80 max-w-3xl mx-auto px-4">
               We understand the unique challenges small businesses face with AI adoption
             </p>
           </motion.div>
 
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-3xl mx-auto px-4">
             <motion.div
               initial={{ y: 20, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.1 }}
               viewport={{ once: true }}
-              className="bg-gradient-to-br from-primary/5 to-primary/10 backdrop-blur-sm rounded-xl p-8 border border-primary/20"
+              className="bg-gradient-to-br from-primary/5 to-primary/10 backdrop-blur-sm rounded-xl p-6 md:p-8 border border-primary/20"
             >
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
@@ -339,28 +326,28 @@ export default function Home() {
       </section>
 
       {/* 5. FAQ Section */}
-      <section className="section-padding bg-neutral-light">
+      <section className="section-padding bg-neutral-light touch-none">
         <div className="container-custom">
           <motion.div 
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center mb-12"
           >
             <h2 className="heading-lg mb-6">Common Questions</h2>
-            <p className="text-xl text-light/80 max-w-3xl mx-auto">
+            <p className="text-xl text-light/80 max-w-3xl mx-auto px-4">
               Everything you need to know about our AI implementation process
             </p>
           </motion.div>
 
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-3xl mx-auto px-4">
             <motion.div
               initial={{ y: 20, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.1 }}
               viewport={{ once: true }}
-              className="bg-white rounded-xl p-8 border border-neutral-200 shadow-lg"
+              className="bg-white rounded-xl p-6 md:p-8 border border-neutral-200 shadow-lg"
             >
               <ul className="space-y-6">
                 <li className="space-y-2">
@@ -418,48 +405,35 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Final CTA Section */}
-      <section className="section-padding bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent opacity-30"></div>
-        <div className="container-custom relative">
-          <div className="max-w-3xl mx-auto text-center">
-            <motion.h2 
-              initial={{ y: 20, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
-              className="heading-lg text-white mb-6"
-            >
-              Ready to Transform Your Business with AI?
-            </motion.h2>
-            <motion.p 
-              initial={{ y: 20, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="text-xl text-neutral-300 mb-8"
-            >
-              Start with a free audit and three AI workflows. No strings attached.
-            </motion.p>
-            <motion.div
-              initial={{ y: 20, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              viewport={{ once: true }}
-              className="space-y-4"
-            >
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <FormModalWrapper buttonText="Get Your Free AI Workflow Audit" />
-                <Link 
-                  href="/pricing" 
-                  className="inline-flex items-center justify-center px-6 sm:px-10 py-3 sm:py-4 border border-white/20 text-base sm:text-lg font-medium rounded-lg text-white hover:bg-white/10 transition-colors whitespace-nowrap"
-                >
-                  View Pricing
-                </Link>
-              </div>
-              <p className="text-sm text-neutral-400">No credit card required. Takes 2-3 minutes.</p>
-            </motion.div>
-          </div>
+      {/* 6. Final CTA Section */}
+      <section className="section-padding bg-neutral touch-none">
+        <div className="container-custom">
+          <motion.div 
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="text-center max-w-3xl mx-auto px-4"
+          >
+            <h2 className="heading-lg mb-6">Ready to Transform Your Business with AI?</h2>
+            <p className="text-xl text-light/80 mb-8">
+              Get started with a free AI workflow audit and see the impact for yourself
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
+              <Link 
+                href="/audit" 
+                className="btn-primary w-full sm:w-auto"
+              >
+                Get Free AI Workflow Audit
+              </Link>
+              <Link 
+                href="/pricing" 
+                className="btn-secondary w-full sm:w-auto"
+              >
+                View Pricing
+              </Link>
+            </div>
+          </motion.div>
         </div>
       </section>
     </main>
