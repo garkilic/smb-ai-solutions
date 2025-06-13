@@ -22,7 +22,7 @@ export default function PricingPage() {
       <TallyFormModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       
       {/* Hero Section */}
-      <section className="section-padding bg-gradient-to-b from-neutral to-neutral-light relative overflow-hidden">
+      <section className="section-padding bg-gradient-to-b from-neutral to-neutral-light relative">
         <div className="absolute inset-0 bg-gradient-radial from-primary/5 to-transparent opacity-50"></div>
         <div className="container-custom relative">
           <motion.div 
@@ -61,7 +61,7 @@ export default function PricingPage() {
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
-              className="pricing-card group hover:shadow-lg transition-shadow"
+              className="pricing-card group hover:shadow-lg transition-shadow pt-10 sm:pt-12 md:pt-12"
             >
               <div className="mb-8 text-center">
                 <h3 className="heading-lg mb-4">Starter</h3>
@@ -110,7 +110,7 @@ export default function PricingPage() {
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.1 }}
               viewport={{ once: true }}
-              className="pricing-card group hover:shadow-lg transition-shadow"
+              className="pricing-card group hover:shadow-lg transition-shadow pt-10 sm:pt-12 md:pt-12"
             >
               <div className="pricing-popular">
                 <span className="text-primary font-medium">Most Popular</span>
@@ -162,7 +162,7 @@ export default function PricingPage() {
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.2 }}
               viewport={{ once: true }}
-              className="pricing-card group hover:shadow-lg transition-shadow"
+              className="pricing-card group hover:shadow-lg transition-shadow pt-10 sm:pt-12 md:pt-12"
             >
               <div className="mb-8 text-center">
                 <h3 className="heading-lg mb-4">Enterprise</h3>
