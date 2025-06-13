@@ -230,7 +230,7 @@ export default function Home() {
                     <span className="text-3xl md:text-4xl font-bold text-primary">2</span>
                   </div>
                   <div className="bg-white rounded-xl p-6 md:p-8 border border-neutral-200 shadow-sm w-full md:w-[500px] min-h-[180px] flex flex-col">
-                    <h3 className="font-semibold text-neutral-900 mb-6 text-xl md:text-2xl text-center">Free Implementation</h3>
+                    <h3 className="font-semibold text-neutral-900 mb-6 text-xl md:text-2xl text-center">Free Audit</h3>
                     <ul className="space-y-4 flex-grow">
                       <li className="flex items-start gap-4">
                         <FaCheckCircle className="w-6 h-6 text-primary mt-1" />

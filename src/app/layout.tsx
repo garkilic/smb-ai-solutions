@@ -16,8 +16,10 @@ export const metadata: Metadata = {
   viewport: {
     width: 'device-width',
     initialScale: 1,
-    maximumScale: 1,
-    userScalable: false,
+    viewportFit: 'cover',
+  },
+  other: {
+    'overscroll-behavior': 'none',
   },
 };
 
@@ -27,16 +29,18 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className={`${inter.className} antialiased min-h-screen bg-neutral overflow-x-hidden`}>
-        <Navigation />
-        <main className="pt-16 md:pt-20">
-          {children}
-        </main>
-        <Script
-          src="https://tally.so/widgets/embed.js"
-          strategy="lazyOnload"
-        />
+    <html lang="en" className="scroll-smooth overscroll-none">
+      <body className={`${inter.className} antialiased min-h-screen bg-neutral overscroll-none`}>
+        <div className="w-full overflow-x-hidden overscroll-none">
+          <Navigation />
+          <main className="pt-16 md:pt-20">
+            {children}
+          </main>
+          <Script
+            src="https://tally.so/widgets/embed.js"
+            strategy="lazyOnload"
+          />
+        </div>
       </body>
     </html>
   );
