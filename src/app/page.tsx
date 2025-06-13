@@ -191,29 +191,33 @@ export default function Home() {
             </p>
           </motion.div>
 
-          <div className="max-w-4xl mx-auto px-4">
+          <div className="max-w-7xl mx-auto px-4">
             <div className="relative">
-              <div className="space-y-12 md:space-y-16">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6">
                 <motion.div
                   initial={{ y: 20, opacity: 0 }}
                   whileInView={{ y: 0, opacity: 1 }}
                   transition={{ duration: 0.5, delay: 0.1 }}
                   viewport={{ once: true }}
-                  className="relative flex flex-col md:flex-row justify-center items-center md:items-start gap-6 md:gap-8"
+                  className="relative h-full"
                 >
-                  <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-white border-4 border-primary/20 flex items-center justify-center flex-shrink-0">
-                    <span className="text-3xl md:text-4xl font-bold text-primary">1</span>
-                  </div>
-                  <div className="bg-white rounded-xl p-6 md:p-8 border border-neutral-200 shadow-sm w-full md:w-[500px] min-h-[180px] flex flex-col">
+                  <div className="bg-white rounded-xl p-6 md:p-8 border border-neutral-200 shadow-sm w-full h-full flex flex-col">
+                    <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-white border-4 border-primary/20 flex items-center justify-center mx-auto mb-6">
+                      <span className="text-3xl md:text-4xl font-bold text-primary">1</span>
+                    </div>
                     <h3 className="font-semibold text-neutral-900 mb-6 text-xl md:text-2xl text-center">Quick Assessment</h3>
                     <ul className="space-y-4 flex-grow">
                       <li className="flex items-start gap-4">
-                        <FaCheckCircle className="w-6 h-6 text-primary mt-1" />
-                        <span className="text-neutral-600 text-lg">Fill out a brief questionnaire about your business needs</span>
+                        <FaCheckCircle className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
+                        <span className="text-neutral-600 text-lg">Share your business pain points. We'll identify key opportunities.</span>
                       </li>
                       <li className="flex items-start gap-4">
-                        <FaCheckCircle className="w-6 h-6 text-primary mt-1" />
-                        <span className="text-neutral-600 text-lg">15-minute call with our founder to understand your goals</span>
+                        <FaCheckCircle className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
+                        <span className="text-neutral-600 text-lg">15-min strategy call with founder. Discuss your specific needs.</span>
+                      </li>
+                      <li className="flex items-start gap-4">
+                        <FaCheckCircle className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
+                        <span className="text-neutral-600 text-lg">Receive your custom AI roadmap. Start your journey today.</span>
                       </li>
                     </ul>
                   </div>
@@ -224,25 +228,25 @@ export default function Home() {
                   whileInView={{ y: 0, opacity: 1 }}
                   transition={{ duration: 0.5, delay: 0.2 }}
                   viewport={{ once: true }}
-                  className="relative flex flex-col md:flex-row justify-center items-center md:items-start gap-6 md:gap-8"
+                  className="relative h-full"
                 >
-                  <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-white border-4 border-primary/20 flex items-center justify-center flex-shrink-0">
-                    <span className="text-3xl md:text-4xl font-bold text-primary">2</span>
-                  </div>
-                  <div className="bg-white rounded-xl p-6 md:p-8 border border-neutral-200 shadow-sm w-full md:w-[500px] min-h-[180px] flex flex-col">
+                  <div className="bg-white rounded-xl p-6 md:p-8 border border-neutral-200 shadow-sm w-full h-full flex flex-col">
+                    <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-white border-4 border-primary/20 flex items-center justify-center mx-auto mb-6">
+                      <span className="text-3xl md:text-4xl font-bold text-primary">2</span>
+                    </div>
                     <h3 className="font-semibold text-neutral-900 mb-6 text-xl md:text-2xl text-center">Free Audit</h3>
                     <ul className="space-y-4 flex-grow">
                       <li className="flex items-start gap-4">
-                        <FaCheckCircle className="w-6 h-6 text-primary mt-1" />
-                        <span className="text-neutral-600 text-lg">Receive a detailed audit of your current workflows</span>
+                        <FaCheckCircle className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
+                        <span className="text-neutral-600 text-lg">Discover your AI readiness score. See where you stand.</span>
                       </li>
                       <li className="flex items-start gap-4">
-                        <FaCheckCircle className="w-6 h-6 text-primary mt-1" />
-                        <span className="text-neutral-600 text-lg">Get three popular AI threads you can use right away</span>
+                        <FaCheckCircle className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
+                        <span className="text-neutral-600 text-lg">Review your business audit report. Find growth opportunities.</span>
                       </li>
                       <li className="flex items-start gap-4">
-                        <FaCheckCircle className="w-6 h-6 text-primary mt-1" />
-                        <span className="text-neutral-600 text-lg">Consultation to discuss implementation and results</span>
+                        <FaCheckCircle className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
+                        <span className="text-neutral-600 text-lg">Explore your custom AI roadmap. Plan your next steps.</span>
                       </li>
                     </ul>
                   </div>
@@ -253,25 +257,25 @@ export default function Home() {
                   whileInView={{ y: 0, opacity: 1 }}
                   transition={{ duration: 0.5, delay: 0.3 }}
                   viewport={{ once: true }}
-                  className="relative flex flex-col md:flex-row justify-center items-center md:items-start gap-6 md:gap-8"
+                  className="relative h-full"
                 >
-                  <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-white border-4 border-primary/20 flex items-center justify-center flex-shrink-0">
-                    <span className="text-3xl md:text-4xl font-bold text-primary">3</span>
-                  </div>
-                  <div className="bg-white rounded-xl p-6 md:p-8 border border-neutral-200 shadow-sm w-full md:w-[500px] min-h-[180px] flex flex-col">
+                  <div className="bg-white rounded-xl p-6 md:p-8 border border-neutral-200 shadow-sm w-full h-full flex flex-col">
+                    <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-white border-4 border-primary/20 flex items-center justify-center mx-auto mb-6">
+                      <span className="text-3xl md:text-4xl font-bold text-primary">3</span>
+                    </div>
                     <h3 className="font-semibold text-neutral-900 mb-6 text-xl md:text-2xl text-center">Full Implementation</h3>
                     <ul className="space-y-4 flex-grow">
                       <li className="flex items-start gap-4">
-                        <FaCheckCircle className="w-6 h-6 text-primary mt-1" />
-                        <span className="text-neutral-600 text-lg">If you love the results, we implement your complete AI system</span>
+                        <FaCheckCircle className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
+                        <span className="text-neutral-600 text-lg">Launch your AI system. Transform your operations.</span>
                       </li>
                       <li className="flex items-start gap-4">
-                        <FaCheckCircle className="w-6 h-6 text-primary mt-1" />
-                        <span className="text-neutral-600 text-lg">Ongoing support and optimization</span>
+                        <FaCheckCircle className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
+                        <span className="text-neutral-600 text-lg">Train your entire team. Build AI expertise.</span>
                       </li>
                       <li className="flex items-start gap-4">
-                        <FaCheckCircle className="w-6 h-6 text-primary mt-1" />
-                        <span className="text-neutral-600 text-lg">Regular check-ins to ensure success</span>
+                        <FaCheckCircle className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
+                        <span className="text-neutral-600 text-lg">Access ongoing support. Ensure long-term success.</span>
                       </li>
                     </ul>
                   </div>
