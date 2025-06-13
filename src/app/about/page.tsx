@@ -147,30 +147,32 @@ export default function AboutPage() {
             </motion.div>
 
             {/* CTA Section */}
-            <motion.div 
-              initial={{ y: 20, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
-              className="text-center"
-            >
-              <h2 className="heading-lg text-neutral-900 mb-6">Ready to Transform Your Business?</h2>
-              <p className="text-xl text-neutral-600 mb-8">
-                Let's work together to build AI solutions that actually work for your team.
-              </p>
+            <div className="bg-primary/5 py-16 rounded-xl shadow-lg mt-16">
               <motion.div 
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="flex justify-center"
+                initial={{ y: 20, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="text-center"
               >
-                <Link
-                  href="/pricing"
-                  className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-medium rounded-lg text-white bg-primary hover:bg-primary/90 transition-colors"
+                <h2 className="heading-lg text-neutral-900 mb-6">Ready to Transform Your Business?</h2>
+                <p className="text-xl text-neutral-600 mb-8">
+                  Let's work together to build AI solutions that actually work for your team.
+                </p>
+                <motion.div 
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="flex justify-center"
                 >
-                  View Our Solutions
-                </Link>
+                  <Link
+                    href="/pricing"
+                    className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-medium rounded-lg text-white bg-primary hover:bg-primary/90 transition-colors"
+                  >
+                    View Our Solutions
+                  </Link>
+                </motion.div>
               </motion.div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>

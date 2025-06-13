@@ -51,8 +51,97 @@ export default function PricingPage() {
         </div>
       </section>
 
-      {/* Main Pricing Section */}
-      <section className="section-padding bg-neutral">
+      {/* Guarantee Section - moved up */}
+      <div className="bg-neutral py-16">
+        <motion.div 
+          initial={{ y: 20, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className="pricing-section max-w-4xl mx-auto"
+        >
+          <div className="flex items-center gap-4 mb-6">
+            <motion.div
+              whileHover={{ rotate: 360 }}
+              transition={{ duration: 0.5 }}
+            >
+              <FaShieldAlt className="w-8 h-8 text-primary" />
+            </motion.div>
+            <h3 className="heading-lg">30-Day Risk-Free Guarantee</h3>
+          </div>
+          <p className="text-lg text-light/80">
+            Every plan is backed by our 30-day risk-free guarantee. If you don't see clear results or feel confident using AI in your business, we'll fix it or refund it.
+          </p>
+          <p className="text-sm text-light/60 mt-2">
+            * For ongoing consulting (AI Ops retainer), if you're not satisfied within the first 30 days, you can request a full refund for your first month. After 30 days, you can cancel anytime and your subscription will not renew for the next month.
+          </p>
+        </motion.div>
+      </div>
+
+      {/* Monthly Support Option - moved up */}
+      <div className="bg-neutral py-16">
+        <motion.div 
+          initial={{ y: 20, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className="pricing-section max-w-4xl mx-auto"
+        >
+          <div className="flex items-center gap-4 mb-6">
+            <motion.div
+              className="w-8 h-8 text-primary"
+            >
+              <FaHandshake className="w-8 h-8 text-primary" />
+            </motion.div>
+            <div>
+              <h3 className="heading-lg">Your AI Ops Team — On Demand</h3>
+              <p className="text-light/80 mt-2">Get a dedicated AI strategist for a fraction of the cost of hiring an AI engineer full time.</p>
+            </div>
+          </div>
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+              <p className="text-lg text-light/80 mb-6">
+                Stop starting from scratch with every new AI idea. With our AI Ops retainer, you get a dedicated strategist who learns your business inside-out, implements new automations monthly, and keeps your systems sharp.
+              </p>
+              <ul className="space-y-4">
+                {[
+                  "Receive one Solution Thread every week.",
+                  "We deliver threads until your business is fully using AI.",
+                  "We handle all the technical setup for you.",
+                  "Get fast answers with priority Slack support."
+                ].map((feature, index) => (
+                  <motion.li 
+                    key={index}
+                    initial={{ x: -20, opacity: 0 }}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    transition={{ duration: 0.3, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    className="pricing-feature"
+                  >
+                    <FaCheckCircle className="pricing-feature-icon" />
+                    <span className="pricing-feature-text">{feature}</span>
+                  </motion.li>
+                ))}
+              </ul>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-light-brighter mb-4">$3,997<span className="text-xl">/mo</span></div>
+              <p className="text-red-500 font-medium mb-4">Limited onboarding slots this month</p>
+              <motion.button 
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => window.open('https://calendly.com/garkilic/griffin-arkilic', '_blank')}
+                className="inline-flex items-center justify-center px-8 py-4 border-2 border-primary text-lg font-medium rounded-lg text-primary bg-transparent hover:bg-primary/10 transition-colors"
+              >
+                Book My AI Strategy Call
+              </motion.button>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+
+      {/* Main Pricing Section (One-Time Payment Cards) */}
+      <section className="py-16 bg-neutral">
         <div className="container-custom">
           <div className="grid md:grid-cols-3 gap-12 max-w-[1400px] mx-auto">
             {/* Starter Plan */}
@@ -63,8 +152,12 @@ export default function PricingPage() {
               viewport={{ once: true }}
               className="pricing-card group hover:shadow-lg transition-shadow pt-10 sm:pt-12 md:pt-12"
             >
+              <div className="mb-2 text-center">
+                <span className="inline-block bg-primary/10 text-primary text-xs font-semibold rounded-full px-3 py-1 mb-2">One-Time Payment</span>
+              </div>
               <div className="mb-8 text-center">
-                <h3 className="heading-lg mb-4">Starter</h3>
+                <h3 className="heading-lg mb-2">Get Your First AI Win</h3>
+                <div className="text-light/70 text-base mb-4">Launch your first AI-powered process and see results fast.</div>
                 <div className="text-5xl font-bold text-light-brighter mb-4">$497</div>
                 <p className="text-light/70 text-lg">Perfect for businesses taking their first steps with AI. We'll help you implement one key thread that saves you time.</p>
               </div>
@@ -110,13 +203,17 @@ export default function PricingPage() {
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.1 }}
               viewport={{ once: true }}
-              className="pricing-card group hover:shadow-lg transition-shadow pt-10 sm:pt-12 md:pt-12"
+              className="pricing-card group hover:shadow-lg transition-shadow pt-10 sm:pt-12 md:pt-12 border-4 border-primary scale-105 z-10"
             >
               <div className="pricing-popular">
                 <span className="text-primary font-medium">Most Popular</span>
               </div>
+              <div className="mb-2 text-center">
+                <span className="inline-block bg-primary/10 text-primary text-xs font-semibold rounded-full px-3 py-1 mb-2">One-Time Payment</span>
+              </div>
               <div className="mb-8 text-center">
-                <h3 className="heading-lg mb-4">Growth</h3>
+                <h3 className="heading-lg mb-2">Scale AI Across Your Team</h3>
+                <div className="text-light/70 text-base mb-4">Multiply your productivity with AI-powered workflows for your whole team.</div>
                 <div className="text-5xl font-bold text-light-brighter mb-4">$1,997</div>
                 <p className="text-light/70 text-lg">Transform your business with AI. We'll implement multiple threads and train your team to use AI effectively.</p>
               </div>
@@ -124,8 +221,7 @@ export default function PricingPage() {
                 {[
                   "3 thread implementations",
                   "Team training sessions",
-                  "1 month of priority support",
-                  "Initial optimization"
+                  "1 month of priority support"
                 ].map((feature, index) => (
                   <motion.li 
                     key={index}
@@ -149,9 +245,9 @@ export default function PricingPage() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={() => setIsModalOpen(true)} 
-                  className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-medium rounded-lg text-white bg-primary hover:bg-primary/90 transition-colors"
+                  className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-medium rounded-lg text-white bg-primary hover:bg-primary/90 shadow-lg transition-colors"
                 >
-                  Start Growth Audit
+                  Scale My Team with AI
                 </motion.button>
               </div>
             </motion.div>
@@ -164,8 +260,12 @@ export default function PricingPage() {
               viewport={{ once: true }}
               className="pricing-card group hover:shadow-lg transition-shadow pt-10 sm:pt-12 md:pt-12"
             >
+              <div className="mb-2 text-center">
+                <span className="inline-block bg-primary/10 text-primary text-xs font-semibold rounded-full px-3 py-1 mb-2">One-Time Payment</span>
+              </div>
               <div className="mb-8 text-center">
-                <h3 className="heading-lg mb-4">Enterprise</h3>
+                <h3 className="heading-lg mb-2">Full AI Transformation</h3>
+                <div className="text-light/70 text-base mb-4">Unlock company-wide AI leverage and ongoing support.</div>
                 <div className="text-5xl font-bold text-light-brighter mb-4">$3,997</div>
                 <p className="text-light/70 text-lg">Full AI transformation. We'll implement 5 core threads and provide ongoing support to ensure your success.</p>
               </div>
@@ -173,8 +273,7 @@ export default function PricingPage() {
                 {[
                   "5 thread implementations",
                   "Dedicated AI coach",
-                  "3 months of priority support",
-                  "Quarterly optimization"
+                  "3 months of priority support"
                 ].map((feature, index) => (
                   <motion.li 
                     key={index}
@@ -200,96 +299,11 @@ export default function PricingPage() {
                   onClick={() => setIsModalOpen(true)} 
                   className="inline-flex items-center justify-center px-8 py-4 border-2 border-primary text-lg font-medium rounded-lg text-primary bg-transparent hover:bg-primary/10 transition-colors"
                 >
-                  Start Enterprise Audit
+                  Transform My Business
                 </motion.button>
               </div>
             </motion.div>
           </div>
-
-          {/* Monthly Support Option */}
-          <motion.div 
-            initial={{ y: 20, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="mt-16 pricing-section max-w-4xl mx-auto"
-          >
-            <div className="flex items-center gap-4 mb-6">
-              <motion.div
-                className="w-8 h-8 text-primary"
-              >
-                <FaHandshake className="w-8 h-8 text-primary" />
-              </motion.div>
-              <div>
-                <h3 className="heading-lg">Your AI Ops Team — On Demand</h3>
-                <p className="text-light/80 mt-2">Get a dedicated AI strategist for a fraction of the cost of hiring an AI engineer full time.</p>
-              </div>
-            </div>
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div>
-                <p className="text-lg text-light/80 mb-6">
-                  Stop starting from scratch with every new AI idea. With our AI Ops retainer, you get a dedicated strategist who learns your business inside-out, implements new automations monthly, and keeps your systems sharp.
-                </p>
-                <ul className="space-y-4">
-                  {[
-                    "Receive one Solution Thread every week.",
-                    "We deliver threads until your business is fully using AI.",
-                    "We handle all the technical setup for you.",
-                    "Get fast answers with priority Slack support."
-                  ].map((feature, index) => (
-                    <motion.li 
-                      key={index}
-                      initial={{ x: -20, opacity: 0 }}
-                      whileInView={{ x: 0, opacity: 1 }}
-                      transition={{ duration: 0.3, delay: index * 0.1 }}
-                      viewport={{ once: true }}
-                      className="pricing-feature"
-                    >
-                      <FaCheckCircle className="pricing-feature-icon" />
-                      <span className="pricing-feature-text">{feature}</span>
-                    </motion.li>
-                  ))}
-                </ul>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-light-brighter mb-4">$3,997<span className="text-xl">/mo</span></div>
-                <p className="text-red-500 font-medium mb-4">Only 4 spots available</p>
-                <motion.button 
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  onClick={() => window.open('https://calendly.com/garkilic/griffin-arkilic', '_blank')}
-                  className="inline-flex items-center justify-center px-8 py-4 border-2 border-primary text-lg font-medium rounded-lg text-primary bg-transparent hover:bg-primary/10 transition-colors"
-                >
-                  Book Support Call
-                </motion.button>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Guarantee Section */}
-          <motion.div 
-            initial={{ y: 20, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="mt-16 pricing-section max-w-4xl mx-auto"
-          >
-            <div className="flex items-center gap-4 mb-6">
-              <motion.div
-                whileHover={{ rotate: 360 }}
-                transition={{ duration: 0.5 }}
-              >
-                <FaShieldAlt className="w-8 h-8 text-primary" />
-              </motion.div>
-              <h3 className="heading-lg">30-Day Risk-Free Guarantee</h3>
-            </div>
-            <p className="text-lg text-light/80">
-              Every plan is backed by our 30-day risk-free guarantee. If you don't see clear results or feel confident using AI in your business, we'll fix it or refund it.
-            </p>
-            <p className="text-sm text-light/60 mt-2">
-              * For ongoing consulting (AI Ops retainer), if you're not satisfied within the first 30 days, you can request a full refund for your first month. After 30 days, you can cancel anytime and your subscription will not renew for the next month.
-            </p>
-          </motion.div>
         </div>
       </section>
 
@@ -314,7 +328,7 @@ export default function PricingPage() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => setIsModalOpen(true)} 
-              className="inline-flex items-center justify-center px-8 py-4 border-2 border-primary text-lg font-medium rounded-lg text-primary bg-transparent hover:bg-primary/10 transition-colors"
+              className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-medium rounded-lg text-white bg-primary hover:bg-primary/90 shadow-lg transition-colors"
             >
               Start Free Assessment
             </motion.button>
