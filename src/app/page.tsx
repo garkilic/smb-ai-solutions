@@ -209,15 +209,15 @@ export default function Home() {
                     <ul className="space-y-4 flex-grow">
                       <li className="flex items-start gap-4">
                         <FaCheckCircle className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
-                        <span className="text-neutral-600 text-lg">Share your business pain points. We'll identify key opportunities.</span>
+                        <span className="text-neutral-600 text-lg">We'll analyze your current processes and identify where AI can make the biggest impact.</span>
                       </li>
                       <li className="flex items-start gap-4">
                         <FaCheckCircle className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
-                        <span className="text-neutral-600 text-lg">15-min strategy call with founder. Discuss your specific needs.</span>
+                        <span className="text-neutral-600 text-lg">Schedule a 15-minute strategy call with our founder to discuss your specific needs and goals.</span>
                       </li>
                       <li className="flex items-start gap-4">
-                        <FaCheckCircle className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
-                        <span className="text-neutral-600 text-lg">Receive your custom AI roadmap. Start your journey today.</span>
+                        <FaArrowRight className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
+                        <span className="text-green-600 text-lg font-medium">Our team will review your challenges and develop a customized plan to transform your business with AI</span>
                       </li>
                     </ul>
                   </div>
@@ -238,15 +238,15 @@ export default function Home() {
                     <ul className="space-y-4 flex-grow">
                       <li className="flex items-start gap-4">
                         <FaCheckCircle className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
-                        <span className="text-neutral-600 text-lg">Discover your AI readiness score. See where you stand.</span>
+                        <span className="text-neutral-600 text-lg">We'll walk through your audit results and identify key opportunities for AI implementation.</span>
                       </li>
                       <li className="flex items-start gap-4">
                         <FaCheckCircle className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
-                        <span className="text-neutral-600 text-lg">Review your business audit report. Find growth opportunities.</span>
+                        <span className="text-neutral-600 text-lg">You'll receive three proven AI threads to use immediately - yours to keep regardless of your decision.</span>
                       </li>
                       <li className="flex items-start gap-4">
-                        <FaCheckCircle className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
-                        <span className="text-neutral-600 text-lg">Explore your custom AI roadmap. Plan your next steps.</span>
+                        <FaArrowRight className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
+                        <span className="text-green-600 text-lg font-medium">We'll recommend the optimal starting points for building your custom AI threads</span>
                       </li>
                     </ul>
                   </div>
@@ -267,15 +267,15 @@ export default function Home() {
                     <ul className="space-y-4 flex-grow">
                       <li className="flex items-start gap-4">
                         <FaCheckCircle className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
-                        <span className="text-neutral-600 text-lg">Launch your AI system. Transform your operations.</span>
+                        <span className="text-neutral-600 text-lg">We'll build and deploy your custom AI threads, handling all technical setup and integration.</span>
                       </li>
                       <li className="flex items-start gap-4">
                         <FaCheckCircle className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
-                        <span className="text-neutral-600 text-lg">Train your entire team. Build AI expertise.</span>
+                        <span className="text-neutral-600 text-lg">Weekly check-ins and monthly success reviews to ensure you're hitting your goals.</span>
                       </li>
                       <li className="flex items-start gap-4">
-                        <FaCheckCircle className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
-                        <span className="text-neutral-600 text-lg">Access ongoing support. Ensure long-term success.</span>
+                        <FaArrowRight className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
+                        <span className="text-green-600 text-lg font-medium">Your business runs smoother than ever with AI - no technical expertise required</span>
                       </li>
                     </ul>
                   </div>
