@@ -154,14 +154,14 @@ export default function ThreadExamplePage() {
       </div>
 
       {/* Detailed Thread Example */}
-      <motion.div 
-        initial={{ y: 20, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5 }}
-        viewport={{ once: true }}
-        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24"
-      >
-        <div className="bg-white rounded-xl shadow-lg p-8 max-w-4xl mx-auto hover:shadow-xl transition-shadow">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        <motion.div 
+          initial={{ y: 20, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className="bg-white rounded-xl shadow-lg p-8 max-w-4xl mx-auto hover:shadow-xl transition-shadow"
+        >
           <div className="mb-8">
             <h2 className="text-2xl font-bold text-neutral-800">AI Content Repurposing Thread – Full Example</h2>
             <p className="text-neutral-600 mt-1">
@@ -169,7 +169,7 @@ export default function ThreadExamplePage() {
             </p>
           </div>
 
-          {/* Quick Overview Section (moved here) */}
+          {/* Quick Overview Section */}
           <div className="mb-8">
             <h3 className="text-xl font-semibold text-neutral-900 mb-2">Quick Overview</h3>
             <table className="w-full text-left border-collapse">
@@ -494,19 +494,19 @@ Example Output:
               </ul>
             </div>
           </div>
-        </div>
-      </motion.div>
+        </motion.div>
+      </div>
 
       {/* CTA Section */}
-      <motion.div 
-        initial={{ y: 20, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5 }}
-        viewport={{ once: true }}
-        className="bg-primary/5"
-      >
+      <div className="bg-primary/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <div className="text-center">
+          <motion.div 
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="text-center"
+          >
             <h2 className="text-3xl font-bold text-neutral-900 mb-6">
               Ready to Transform Your Processes?
             </h2>
@@ -525,9 +525,9 @@ Example Output:
                 View our Pricing Plans
               </Link>
             </motion.div>
-          </div>
+          </motion.div>
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 } 

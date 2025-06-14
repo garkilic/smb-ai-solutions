@@ -7,7 +7,8 @@ import {
   FaInfoCircle,
   FaCheckCircle,
   FaHandshake,
-  FaShieldAlt
+  FaShieldAlt,
+  FaClock
 } from 'react-icons/fa';
 import Link from 'next/link';
 import motion from '../components/MotionWrapper';
@@ -78,7 +79,7 @@ export default function PricingPage() {
         </motion.div>
       </div>
 
-      {/* Monthly Support Option - moved up */}
+      {/* Monthly Support Option - moved up, now immediately after guarantee */}
       <div className="bg-neutral py-16">
         <motion.div 
           initial={{ y: 20, opacity: 0 }}
@@ -88,11 +89,9 @@ export default function PricingPage() {
           className="pricing-section max-w-4xl mx-auto"
         >
           <div className="flex items-center gap-4 mb-6">
-            <motion.div
-              className="w-8 h-8 text-primary"
-            >
-              <FaHandshake className="w-8 h-8 text-primary" />
-            </motion.div>
+            <span className="inline-flex items-center gap-2 bg-green-600 text-white font-bold text-sm px-4 py-2 rounded-full shadow-md">
+              <FaClock className="w-4 h-4" /> Monthly
+            </span>
             <div>
               <h3 className="heading-lg">Your AI Ops Team — On Demand</h3>
               <p className="text-light/80 mt-2">Get a dedicated AI strategist for a fraction of the cost of hiring an AI engineer full time.</p>
@@ -153,7 +152,9 @@ export default function PricingPage() {
               className="pricing-card group hover:shadow-lg transition-shadow pt-10 sm:pt-12 md:pt-12"
             >
               <div className="mb-2 text-center">
-                <span className="inline-block bg-primary/10 text-primary text-xs font-semibold rounded-full px-3 py-1 mb-2">One-Time Payment</span>
+                <span className="inline-flex items-center gap-2 bg-primary text-white font-bold text-sm px-4 py-2 rounded-full shadow-md mb-2">
+                  <FaCheck className="w-4 h-4" /> One-Time Payment
+                </span>
               </div>
               <div className="mb-8 text-center">
                 <h3 className="heading-lg mb-2">Get Your First AI Win</h3>
@@ -209,7 +210,9 @@ export default function PricingPage() {
                 <span className="text-primary font-medium">Most Popular</span>
               </div>
               <div className="mb-2 text-center">
-                <span className="inline-block bg-primary/10 text-primary text-xs font-semibold rounded-full px-3 py-1 mb-2">One-Time Payment</span>
+                <span className="inline-flex items-center gap-2 bg-primary text-white font-bold text-sm px-4 py-2 rounded-full shadow-md mb-2">
+                  <FaCheck className="w-4 h-4" /> One-Time Payment
+                </span>
               </div>
               <div className="mb-8 text-center">
                 <h3 className="heading-lg mb-2">Scale AI Across Your Team</h3>
@@ -261,7 +264,9 @@ export default function PricingPage() {
               className="pricing-card group hover:shadow-lg transition-shadow pt-10 sm:pt-12 md:pt-12"
             >
               <div className="mb-2 text-center">
-                <span className="inline-block bg-primary/10 text-primary text-xs font-semibold rounded-full px-3 py-1 mb-2">One-Time Payment</span>
+                <span className="inline-flex items-center gap-2 bg-primary text-white font-bold text-sm px-4 py-2 rounded-full shadow-md mb-2">
+                  <FaCheck className="w-4 h-4" /> One-Time Payment
+                </span>
               </div>
               <div className="mb-8 text-center">
                 <h3 className="heading-lg mb-2">Full AI Transformation</h3>
