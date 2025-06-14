@@ -144,7 +144,7 @@ body {
   }
 
   .pricing-popular {
-    @apply absolute -top-2 px-3 py-1.5 text-sm left-1/2 -translate-x-1/2 bg-neutral-card rounded-lg border border-primary/20 shadow-lg z-20 whitespace-nowrap min-w-[120px];
+    @apply absolute -top-5 left-1/2 -translate-x-1/2 px-3 py-1.5 text-sm bg-neutral-card rounded-lg border border-primary/20 shadow-lg z-20 whitespace-nowrap min-w-[120px] text-center;
     @apply sm:-top-4 sm:px-4 sm:py-2 sm:text-base;
     @apply md:-top-6;
   }

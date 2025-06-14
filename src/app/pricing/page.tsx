@@ -38,22 +38,12 @@ export default function PricingPage() {
             <p className="text-xl text-light/80 mb-8">
               No complex tech talk, no hidden fees. Just clear plans that help you implement AI in your business, step by step.
             </p>
-            <motion.div 
-              initial={{ y: 20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="p-4 bg-neutral-card rounded-lg border border-neutral-border mb-8 hover:border-primary/50 transition-colors"
-            >
-              <p className="text-primary font-medium">
-                Every plan includes our 30-day risk-free guarantee. If you don't see results, we'll make it right or refund you. No questions asked.
-              </p>
-            </motion.div>
           </motion.div>
         </div>
       </section>
 
       {/* Guarantee Section - moved up */}
-      <div className="bg-neutral py-16">
+      <div className="bg-neutral py-8">
         <motion.div 
           initial={{ y: 20, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
@@ -61,20 +51,17 @@ export default function PricingPage() {
           viewport={{ once: true }}
           className="pricing-section max-w-4xl mx-auto"
         >
-          <div className="flex items-center gap-4 mb-6">
+          <div className="flex items-center gap-4 mb-4">
             <motion.div
               whileHover={{ rotate: 360 }}
               transition={{ duration: 0.5 }}
             >
-              <FaShieldAlt className="w-8 h-8 text-primary" />
+              <FaShieldAlt className="w-6 h-6 text-primary" />
             </motion.div>
             <h3 className="heading-lg">30-Day Risk-Free Guarantee</h3>
           </div>
-          <p className="text-lg text-light/80">
+          <p className="text-base text-light/80">
             Every plan is backed by our 30-day risk-free guarantee. If you don't see clear results or feel confident using AI in your business, we'll fix it or refund it.
-          </p>
-          <p className="text-sm text-light/60 mt-2">
-            * For ongoing consulting (AI Ops retainer), if you're not satisfied within the first 30 days, you can request a full refund for your first month. After 30 days, you can cancel anytime and your subscription will not renew for the next month.
           </p>
         </motion.div>
       </div>
@@ -86,9 +73,12 @@ export default function PricingPage() {
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="pricing-section max-w-4xl mx-auto"
+          className="pricing-section max-w-4xl mx-auto relative border-4 border-primary md:scale-105 z-10 px-4 sm:px-6 lg:px-8"
         >
-          <div className="flex items-center gap-4 mb-6">
+          <div className="pricing-popular">
+            <span className="text-primary font-medium">Most Popular</span>
+          </div>
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-6">
             <span className="inline-flex items-center gap-2 bg-green-600 text-white font-bold text-sm px-4 py-2 rounded-full shadow-md">
               <FaClock className="w-4 h-4" /> Monthly
             </span>
@@ -204,11 +194,8 @@ export default function PricingPage() {
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.1 }}
               viewport={{ once: true }}
-              className="pricing-card group hover:shadow-lg transition-shadow pt-10 sm:pt-12 md:pt-12 border-4 border-primary scale-105 z-10"
+              className="pricing-card group hover:shadow-lg transition-shadow pt-10 sm:pt-12 md:pt-12"
             >
-              <div className="pricing-popular">
-                <span className="text-primary font-medium">Most Popular</span>
-              </div>
               <div className="mb-2 text-center">
                 <span className="inline-flex items-center gap-2 bg-primary text-white font-bold text-sm px-4 py-2 rounded-full shadow-md mb-2">
                   <FaCheck className="w-4 h-4" /> One-Time Payment
