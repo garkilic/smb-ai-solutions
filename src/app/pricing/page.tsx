@@ -93,6 +93,16 @@ export default function PricingPage() {
                 Stop starting from scratch with every new AI idea. With our AI Ops retainer, you get a dedicated strategist who learns your business inside-out, implements new automations monthly, and keeps your systems sharp.
               </p>
               <ul className="space-y-4">
+                <motion.li 
+                  initial={{ x: -20, opacity: 0 }}
+                  whileInView={{ x: 0, opacity: 1 }}
+                  transition={{ duration: 0.3 }}
+                  viewport={{ once: true }}
+                  className="pricing-feature bg-primary/10 border-l-4 border-primary rounded-md px-3 py-2 flex items-center gap-2 mb-2"
+                >
+                  <FaHandshake className="w-5 h-5 text-primary flex-shrink-0" />
+                  <span className="font-semibold text-primary">We pay for and manage all the AI tools you need—no extra subscriptions.</span>
+                </motion.li>
                 {[
                   "Receive one Solution Thread every week.",
                   "We deliver threads until your business is fully using AI.",
@@ -132,14 +142,14 @@ export default function PricingPage() {
       {/* Main Pricing Section (One-Time Payment Cards) */}
       <section className="py-16 bg-neutral">
         <div className="container-custom">
-          <div className="grid md:grid-cols-3 gap-12 max-w-[1400px] mx-auto">
+          <div className="grid md:grid-cols-3 gap-12 max-w-[1400px] mx-auto items-stretch">
             {/* Starter Plan */}
             <motion.div 
               initial={{ y: 20, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
-              className="pricing-card group hover:shadow-lg transition-shadow pt-10 sm:pt-12 md:pt-12"
+              className="pricing-card group hover:shadow-lg transition-shadow pt-10 sm:pt-12 md:pt-12 h-full flex flex-col"
             >
               <div className="mb-2 text-center">
                 <span className="inline-flex items-center gap-2 bg-primary text-white font-bold text-sm px-4 py-2 rounded-full shadow-md mb-2">
@@ -152,13 +162,8 @@ export default function PricingPage() {
                 <div className="text-5xl font-bold text-light-brighter mb-4">$497</div>
                 <p className="text-light/70 text-lg">Perfect for businesses taking their first steps with AI. We'll help you implement one key thread that saves you time.</p>
               </div>
-              <ul className="space-y-4 mb-8 flex-grow">
-                {[
-                  "One thread implementation",
-                  "Step-by-step guidance",
-                  "Basic AI training",
-                  "2 weeks of email support"
-                ].map((feature, index) => (
+              <ul className="grid grid-rows-3 gap-3 mb-4 flex-grow">
+                {["One thread implementation","Step-by-step guidance","Basic AI training"].map((feature, index) => (
                   <motion.li 
                     key={index}
                     initial={{ x: -20, opacity: 0 }}
@@ -172,11 +177,7 @@ export default function PricingPage() {
                   </motion.li>
                 ))}
               </ul>
-              <div className="mb-8 text-center">
-                <h4 className="text-primary font-medium mb-2">Perfect for:</h4>
-                <p className="text-light/70">Small businesses ready to start their AI journey with one key process.</p>
-              </div>
-              <div className="text-center mt-auto">
+              <div className="text-center mt-auto pt-4">
                 <motion.button 
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -186,6 +187,10 @@ export default function PricingPage() {
                   Start Starter Audit
                 </motion.button>
               </div>
+              <div className="flex items-center gap-2 mt-4 justify-center">
+                <FaInfoCircle className="text-red-500 w-4 h-4" />
+                <span className="text-xs text-red-500 font-semibold">AI tool costs not included in one-time plans.</span>
+              </div>
             </motion.div>
 
             {/* Growth Plan */}
@@ -194,7 +199,7 @@ export default function PricingPage() {
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.1 }}
               viewport={{ once: true }}
-              className="pricing-card group hover:shadow-lg transition-shadow pt-10 sm:pt-12 md:pt-12"
+              className="pricing-card group hover:shadow-lg transition-shadow pt-10 sm:pt-12 md:pt-12 h-full flex flex-col"
             >
               <div className="mb-2 text-center">
                 <span className="inline-flex items-center gap-2 bg-primary text-white font-bold text-sm px-4 py-2 rounded-full shadow-md mb-2">
@@ -202,17 +207,13 @@ export default function PricingPage() {
                 </span>
               </div>
               <div className="mb-8 text-center">
-                <h3 className="heading-lg mb-2">Scale AI Across Your Team</h3>
+                <h3 className="heading-lg mb-2">Scale AI Systems</h3>
                 <div className="text-light/70 text-base mb-4">Multiply your productivity with AI-powered workflows for your whole team.</div>
                 <div className="text-5xl font-bold text-light-brighter mb-4">$1,997</div>
                 <p className="text-light/70 text-lg">Transform your business with AI. We'll implement multiple threads and train your team to use AI effectively.</p>
               </div>
-              <ul className="space-y-4 mb-8 flex-grow">
-                {[
-                  "3 thread implementations",
-                  "Team training sessions",
-                  "1 month of priority support"
-                ].map((feature, index) => (
+              <ul className="grid grid-rows-3 gap-3 mb-4 flex-grow">
+                {["3 thread implementations","Team training sessions","1 month of priority support"].map((feature, index) => (
                   <motion.li 
                     key={index}
                     initial={{ x: -20, opacity: 0 }}
@@ -226,11 +227,7 @@ export default function PricingPage() {
                   </motion.li>
                 ))}
               </ul>
-              <div className="mb-8 text-center">
-                <h4 className="text-primary font-medium mb-2">Perfect for:</h4>
-                <p className="text-light/70">Growing businesses ready to scale with AI across multiple processes.</p>
-              </div>
-              <div className="text-center mt-auto">
+              <div className="text-center mt-auto pt-4">
                 <motion.button 
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -240,6 +237,10 @@ export default function PricingPage() {
                   Scale My Team with AI
                 </motion.button>
               </div>
+              <div className="flex items-center gap-2 mt-4 justify-center">
+                <FaInfoCircle className="text-red-500 w-4 h-4" />
+                <span className="text-xs text-red-500 font-semibold">AI tool costs not included in one-time plans.</span>
+              </div>
             </motion.div>
 
             {/* Enterprise Plan */}
@@ -248,7 +249,7 @@ export default function PricingPage() {
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.2 }}
               viewport={{ once: true }}
-              className="pricing-card group hover:shadow-lg transition-shadow pt-10 sm:pt-12 md:pt-12"
+              className="pricing-card group hover:shadow-lg transition-shadow pt-10 sm:pt-12 md:pt-12 h-full flex flex-col"
             >
               <div className="mb-2 text-center">
                 <span className="inline-flex items-center gap-2 bg-primary text-white font-bold text-sm px-4 py-2 rounded-full shadow-md mb-2">
@@ -261,12 +262,8 @@ export default function PricingPage() {
                 <div className="text-5xl font-bold text-light-brighter mb-4">$3,997</div>
                 <p className="text-light/70 text-lg">Full AI transformation. We'll implement 5 core threads and provide ongoing support to ensure your success.</p>
               </div>
-              <ul className="space-y-4 mb-8 flex-grow">
-                {[
-                  "5 thread implementations",
-                  "Dedicated AI coach",
-                  "3 months of priority support"
-                ].map((feature, index) => (
+              <ul className="grid grid-rows-3 gap-3 mb-4 flex-grow">
+                {["5 thread implementations","Dedicated AI coach","3 months of priority support"].map((feature, index) => (
                   <motion.li 
                     key={index}
                     initial={{ x: -20, opacity: 0 }}
@@ -280,11 +277,7 @@ export default function PricingPage() {
                   </motion.li>
                 ))}
               </ul>
-              <div className="mb-8 text-center">
-                <h4 className="text-primary font-medium mb-2">Perfect for:</h4>
-                <p className="text-light/70">Businesses ready for complete AI transformation with ongoing support.</p>
-              </div>
-              <div className="text-center mt-auto">
+              <div className="text-center mt-auto pt-4">
                 <motion.button 
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -293,6 +286,10 @@ export default function PricingPage() {
                 >
                   Transform My Business
                 </motion.button>
+              </div>
+              <div className="flex items-center gap-2 mt-4 justify-center">
+                <FaInfoCircle className="text-red-500 w-4 h-4" />
+                <span className="text-xs text-red-500 font-semibold">AI tool costs not included in one-time plans.</span>
               </div>
             </motion.div>
           </div>
