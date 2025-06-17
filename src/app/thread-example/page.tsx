@@ -155,13 +155,13 @@ export default function ThreadExamplePage() {
 
       {/* Detailed Thread Example */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-        <motion.div 
-          initial={{ y: 20, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
+      <motion.div 
+        initial={{ y: 20, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
           className="bg-white rounded-xl shadow-lg p-8 max-w-4xl mx-auto hover:shadow-xl transition-shadow"
-        >
+      >
           <div className="mb-8">
             <h2 className="text-2xl font-bold text-neutral-800">AI Content Repurposing Thread – Full Example</h2>
             <p className="text-neutral-600 mt-1">
@@ -495,18 +495,18 @@ Example Output:
             </div>
           </div>
         </motion.div>
-      </div>
+        </div>
 
       {/* CTA Section */}
       <div className="bg-primary/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <motion.div 
-            initial={{ y: 20, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
+      <motion.div 
+        initial={{ y: 20, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
             className="text-center"
-          >
+      >
             <h2 className="text-3xl font-bold text-neutral-900 mb-6">
               Ready to Transform Your Processes?
             </h2>

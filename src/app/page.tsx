@@ -50,7 +50,7 @@ export default function Home() {
             className="text-center max-w-3xl mx-auto"
           >
             <h1 className="heading-xl mb-6 text-4xl sm:text-5xl md:text-6xl leading-tight">
-              AI Implementation That Actually Works
+              AI Implementation That Actually Works for Your Business
             </h1>
             <motion.p 
               initial={{ y: 20, opacity: 0 }}
