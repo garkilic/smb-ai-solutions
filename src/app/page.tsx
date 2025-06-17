@@ -424,12 +424,12 @@ export default function Home() {
               Get started with a free AI workflow audit and see the impact for yourself
             </p>
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-              <Link 
-                href="/audit" 
+              <button
+                onClick={() => setIsModalOpen(true)}
                 className="btn-primary w-full sm:w-auto"
               >
                 Get Free AI Workflow Audit
-              </Link>
+              </button>
               <Link 
                 href="/pricing" 
                 className="btn-secondary w-full sm:w-auto"
