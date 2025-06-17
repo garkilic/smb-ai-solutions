@@ -68,12 +68,12 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 0.3 }}
               className="flex flex-col sm:flex-row justify-center items-center gap-4"
             >
-              <Link 
-                href="/audit" 
+              <button
+                onClick={() => setIsModalOpen(true)}
                 className="btn-primary w-full sm:w-auto text-lg py-4"
               >
                 Get Free AI Workflow Audit
-              </Link>
+              </button>
               <Link 
                 href="/pricing" 
                 className="btn-secondary w-full sm:w-auto text-lg py-4"
