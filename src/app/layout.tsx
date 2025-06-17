@@ -42,6 +42,9 @@ export default function RootLayout({
             strategy="lazyOnload"
           />
         </div>
+        <footer className="w-full text-center py-6 text-light/70 text-sm">
+          <a href="mailto:griffin@solutionthreads.com" className="underline hover:text-primary transition-colors">Send us an email</a>
+        </footer>
         <Analytics />
       </body>
     </html>
