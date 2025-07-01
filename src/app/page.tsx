@@ -75,10 +75,10 @@ export default function Home() {
                 Get Free AI Workflow Audit
               </button>
               <Link 
-                href="/pricing" 
-                className="btn-secondary w-full sm:w-auto text-lg py-4"
+                href="/thread-example" 
+                className="bg-green-600 hover:bg-green-700 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl w-full sm:w-auto text-lg text-center"
               >
-                View Pricing
+                View Sample Workflow
               </Link>
             </motion.div>
           </motion.div>
@@ -164,10 +164,10 @@ export default function Home() {
                 </p>
                 <Link 
                   href="/thread-example" 
-                  className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors text-lg"
+                  className="inline-flex items-center gap-3 bg-green-600 hover:bg-green-700 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl text-lg group border-2 border-green-500 hover:border-green-400"
                 >
-                  View Example Workflow
-                  <FaArrowRight className="w-5 h-5" />
+                  View Sample Workflow
+                  <FaArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
                 </Link>
               </div>
             </motion.div>
